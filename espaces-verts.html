@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KLNWW7NJ');</script>
+<!-- End Google Tag Manager -->
+
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Espaces Verts & Jardinage | Arc-en-Ciel Prestations</title>
@@ -72,9 +82,14 @@
 </head>
 <body>
 
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLNWW7NJ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
     <header>
         <div class="container">
-            <h1>Arc-en-Ciel Prestations</h1>
+            <h1>Arc-en-Ciel Services</h1>
             <nav>
                 <ul>
                     <li><a href="index.html">Accueil</a></li>
@@ -112,6 +127,11 @@
                     <li>Désherbage des allées, des terrasses et des parterres.</li>
                     <li>Arrosage ciblé et entretien des potagers.</li>
                 </ul>
+				
+				<p style="margin-top: 20px; padding: 12px; background-color: #f9fbf9; border-left: 4px solid #27ae60; font-size: 0.95rem;">
+                    Pour calculer les volumes de vos massifs ou estimer vos surfaces, utilisez nos <a href="liens-utiles.html" style="color: #27ae60; font-weight: bold; text-decoration: underline;">outils de calcul en ligne gratuits</a>.
+                </p>
+				
             </div>
 
             <!-- Colonne 2 : Préparation Automne/Hiver -->
@@ -174,10 +194,53 @@
             <a href="web-seo.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Web & SEO</a> | 
             <a href="contact.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Contact</a> | 
             <a href="blog.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Blog & Actu</a> | 
+            <a href="liens-utiles.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Sites Utiles</a> |
             <a href="mentions-legales.html" style="color: #666; text-decoration: none; margin: 0 15px; font-size: 0.9rem;">Mentions Légales</a>
         </div>
-        <p style="color: #999; font-size: 0.9rem; margin: 0;">&copy; 2026 Arc-en-Ciel Prestations - Tous droits réservés.</p>
+        <p style="color: #999; font-size: 0.9rem; margin: 0;">&copy; 2026 Arc-en-Ciel Services - Tous droits réservés.</p>
     </footer>
+
+
+<div id="cookie-banner" style="position: fixed; bottom: 20px; left: 20px; right: 20px; background: #1a202c; color: white; padding: 15px 20px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); z-index: 10000; font-family: Arial, sans-serif; font-size: 0.9rem; display: none;">
+    <div style="max-width: 1200px; margin: 0 auto; display: table; width: 100%;">
+        <div style="display: table-cell; vertical-align: middle;">
+            Arc-en-Ciel Services utilise des cookies pour analyser le trafic du site via Google Analytics. Vous pouvez accepter ou refuser ces traceurs.
+        </div>
+        <div style="display: table-cell; vertical-align: middle; text-align: right; width: 200px;">
+            <button onclick="acceptCookies()" style="background: #27ae60; color: white; border: none; padding: 8px 15px; border-radius: 4px; cursor: pointer; font-weight: bold; margin-right: 10px;">Accepter</button>
+            <button onclick="rejectCookies()" style="background: #e74c3c; color: white; border: none; padding: 8px 15px; border-radius: 4px; cursor: pointer; font-weight: bold;">Refuser</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    window.onload = function() {
+        if (!localStorage.getItem('cookie_consent')) {
+            document.getElementById('cookie-banner').style.display = 'block';
+        } else if (localStorage.getItem('cookie_consent') === 'accepted') {
+            loadAnalytics();
+        }
+    };
+
+    function acceptCookies() {
+        localStorage.setItem('cookie_consent', 'accepted');
+        document.getElementById('cookie-banner').style.display = 'none';
+        loadAnalytics();
+    }
+
+    function rejectCookies() {
+        localStorage.setItem('cookie_consent', 'rejected');
+        document.getElementById('cookie-banner').style.display = 'none';
+    }
+
+    function loadAnalytics() {
+        // Insère ici ton script Google Analytics (GA4) uniquement si l'utilisateur accepte
+        // Exemple :
+        // var script = document.createElement('script');
+        // script.src = "https://www.googletagmanager.com/gtag/js?id=G-TON-ID";
+        // document.head.appendChild(script);
+    }
+</script>
 
 </body>
 </html>

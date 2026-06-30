@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arc-en-Ciel Services - Générateur de Site</title>
+	
+	<!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLNWW7NJ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            padding: 0;
+            margin: 0;
+        }
+        
+        /* Barre de navigation style image_04eec1.png */
+        header.site-header {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e5e7eb;
+            padding: 20px;
+        }
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header-container h1 {
+            color: #1e3a8a;
+            margin: 0;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .header-container nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 25px;
+        }
+        .header-container nav a {
+            color: #374151;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.95rem;
+        }
+        .header-container nav a:hover {
+            color: #1e3a8a;
+        }
+
+        /* Corps de la page */
+        .main-wrapper {
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 600px;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin: 0 auto;
+        }
+        .container h2 { 
+            color: #2c3e50; 
+            text-align: center; 
+            margin-top: 0;
+        }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button.btn-generate {
+            width: 100%;
+            padding: 12px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button.btn-generate:hover { background-color: #2980b9; }
+    </style>
+</head>
+
+<body>
+
+<header class="site-header">
+    <div class="header-container">
+        <h1>Arc-en-Ciel Services</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="espaces-verts.html">Espaces Verts</a></li>
+                <li><a href="services-menage.html">Ménage</a></li>
+                <li><a href="web-seo.html">Web & SEO</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div class="main-wrapper">
+    <div class="container">
+        <h2>🚀 Créateur de Site GRATUIT </h2>
+        <p style="text-align: center; color: #666;">Remplissez les champs pour télécharger votre fichier HTML prêt à l'emploi.</p>
+        
+        <div class="form-group">
+            <label for="siteTitle">Titre du site :</label>
+            <input type="text" id="siteTitle" placeholder="Ex: Mon Entreprise de Plomberie">
+        </div>
+
+        <div class="form-group">
+            <label for="siteColor">Couleur principale :</label>
+            <select id="siteColor">
+                <option value="#3498db">Bleu</option>
+                <option value="#2ecc71">Vert</option>
+                <option value="#e74c3c">Rouge</option>
+                <option value="#9b59b6">Violet</option>
+                <option value="#f1c40f">Jaune</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="siteDescription">Description ou texte principal :</label>
+            <textarea id="siteDescription" rows="5" placeholder="Présentez votre activité en quelques lignes..."></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="siteContact">Contact (Email ou Téléphone) :</label>
+            <input type="text" id="siteContact" placeholder="Ex: contact@mon-site.fr">
+        </div>
+
+        <button class="btn-generate" onclick="genererLeSite()">🚀 Générer et Télécharger mon site</button>
+    </div>
+</div>
+
+<script>
+function genererLeSite() {
+    // Récupération des données du formulaire[cite: 1]
+    const title = document.getElementById('siteTitle').value || "Mon Site Internet";[cite: 1]
+    const color = document.getElementById('siteColor').value;[cite: 1]
+    const description = document.getElementById('siteDescription').value || "Bienvenue sur mon site internet.";[cite: 1]
+    const contact = document.getElementById('siteContact').value || "Non renseigné";[cite: 1]
+
+    // Choix automatique de l'émoji en fonction du contenu du champ contact
+    let contactEmoji = "ℹ️"; 
+    if (contact.includes('@')) {
+        contactEmoji = "✉️"; // Émoji e-mail si présence d'un '@'
+    } else if (/[0-9]/.test(contact)) {
+        contactEmoji = "📞"; // Émoji téléphone si présence de chiffres
+    }
+
+    // Structure du template HTML qui sera généré[cite: 1]
+    const htmlContenu = `<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>${title}</title>
+    <style>
+        body { font-family: sans-serif; margin: 0; padding: 0; background-color: #fcfcfc; color: #333; }[cite: 1]
+        header { background-color: ${color}; color: white; padding: 40px 20px; text-align: center; }[cite: 1]
+        .main-content { max-width: 800px; margin: 30px auto; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }[cite: 1]
+        footer { text-align: center; padding: 20px; background: #222; color: white; position: fixed; width: 100%; bottom: 0; }[cite: 1]
+    </style>
+</head>
+<body>
+    <header>
+        <h1>${title}</h1>[cite: 1]
+    </header>
+    <div class="main-content">
+        <h2>👋 Présentation</h2>
+        <p>${description.replace(/\n/g, '<br>')}</p>[cite: 1]
+        <hr>
+        <h2>💬 Contact</h2>
+        <p>Vous pouvez me contacter via : <span>${contactEmoji}</span> <strong>${contact}</strong></p>
+    </div>
+    <footer>
+        <p>&copy; 2026 ${title} - Site généré via Arc-en-Ciel Services</p>[cite: 1]
+    </footer>
+</body>
+</html>`;
+
+    // Création du fichier et déclenchement du téléchargement[cite: 1]
+    const blob = new Blob([htmlContenu], { type: 'text/html' });[cite: 1]
+    const url = URL.createObjectURL(blob);[cite: 1]
+    const link = document.createElement('a');[cite: 1]
+    link.href = url;[cite: 1]
+    link.download = 'index.html';[cite: 1]
+    document.body.appendChild(link);[cite: 1]
+    link.click();[cite: 1]
+    document.body.removeChild(link);[cite: 1]
+    URL.revokeObjectURL(url);[cite: 1]
+}
+</script>
+
+<div style="margin-top: 5rem; padding: 4rem 2rem; background-color: #1a202c; color: #ffffff; border-radius: 12px; text-align: center; font-family: 'Inter', sans-serif;">
+    <h3 style="font-size: 1.6rem; font-weight: 600; margin-bottom: 0.5rem;">Vous avez besoin d'aide ou souhaitez un rendu pro ?</h3>
+    <p style="font-family: Arial, sans-serif; font-size: 1rem; color: #a0aec0; max-width: 500px; margin: 0 auto 2.5rem auto; line-height: 1.5;">
+        Discutons simplement de votre page internet et de votre visibilité locale sans engagement.
+    </p>
+    
+    <div style="display: flex; justify-content: center;">
+        <!-- Action uniquement vers le Contact -->
+        <a href="contact.html" style="display: inline-block; background-color: #ffffff; color: #1a202c; padding: 12px 30px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95rem; border: 2px solid #ffffff; transition: 0.2s;">
+            <span style="margin-right: 6px; display: inline-block;">✉️</span>Contacter le conseiller Web
+        </a>
+    </div>
+</div>	
+
+<footer style="text-align: center; padding: 40px 20px; margin-top: 60px; border-top: 1px solid #eaeaea; width: 100%; box-sizing: border-box; background-color: #ffffff;">
+    <div style="margin-bottom: 1.5rem; line-height: 1.8;">
+        <a href="services-menage.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Ménage</a> | 
+        <a href="espaces-verts.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Jardin</a> | 
+        <a href="web-seo.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Web & SEO</a> | 
+        <a href="contact.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Contact</a> | 
+        <a href="blog.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Blog & Actu</a> | 
+        <a href="liens-utiles.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Sites Utiles</a> |
+        <a href="mentions-legales.html" style="color: #666; text-decoration: none; margin: 0 15px; font-size: 0.9rem;">Mentions Légales</a>
+    </div>
+    <p style="color: #999; font-size: 0.9rem; margin: 0;">&copy; 2026 Arc-en-Ciel Services - Tous droits réservés.</p>
+</footer>
+	
+<div id="cookie-banner" style="position: fixed; bottom: 20px; left: 20px; right: 20px; background: #1a202c; color: white; padding: 15px 20px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); z-index: 10000; font-family: Arial, sans-serif; font-size: 0.9rem; display: none;">
+    <div style="max-width: 1200px; margin: 0 auto; display: table; width: 100%;">
+        <div style="display: table-cell; vertical-align: middle;">
+            Arc-en-Ciel Services utilise des cookies pour analyser le trafic du site via Google Analytics. Vous pouvez accepter ou refuser ces traceurs.
+        </div>
+        <div style="display: table-cell; vertical-align: middle; text-align: right; width: 200px;">
+            <button onclick="acceptCookies()" style="background: #27ae60; color: white; border: none; padding: 8px 15px; border-radius: 4px; cursor: pointer; font-weight: bold; margin-right: 10px; width: auto;">Accepter</button>
+            <button onclick="rejectCookies()" style="background: #e74c3c; color: white; border: none; padding: 8px 15px; border-radius: 4px; cursor: pointer; font-weight: bold; width: auto;">Refuser</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    window.onload = function() {
+        if (!localStorage.getItem('cookie_consent')) {
+            document.getElementById('cookie-banner').style.display = 'block';
+        } else if (localStorage.getItem('cookie_consent') === 'accepted') {
+            loadAnalytics();
+        }
+    };
+
+    function acceptCookies() {
+        localStorage.setItem('cookie_consent', 'accepted');
+        document.getElementById('cookie-banner').style.display = 'none';
+        loadAnalytics();
+    }
+
+    function rejectCookies() {
+        localStorage.setItem('cookie_consent', 'rejected');
+        document.getElementById('cookie-banner').style.display = 'none';
+    }
+
+    function loadAnalytics() {}
+</script>
+
+</body>
+</html>
