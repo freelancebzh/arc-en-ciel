@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Création Site Web TPE & PME | Arc-en-Ciel Prestations</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .web-hero {
+            background: linear-gradient(135deg, #2c3e50 0%, #1a252f 100%);
+            color: #ffffff;
+            padding: 60px 20px;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 40px;
+        }
+        .web-hero h2 { color: #ffffff; margin-bottom: 15px; font-size: 32px; }
+        .web-hero p { color: #bdc3c7; font-size: 18px; max-width: 800px; margin: 0 auto; }
+        
+        .flex-container {
+            display: table;
+            width: 100%;
+            margin: 30px 0;
+        }
+        .flex-col {
+            display: table-cell;
+            vertical-align: middle;
+            width: 50%;
+        }
+        .page-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .grid-features {
+            display: table;
+            width: 100%;
+            table-layout: fixed;
+            border-collapse: separate;
+            border-spacing: 20px 0;
+            margin: 40px 0;
+        }
+        .feature-box {
+            display: table-cell;
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 6px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            border-left: 4px solid #292b2c;
+            vertical-align: top;
+        }
+        .feature-box h4 { margin-bottom: 10px; color: #2c3e50; font-size: 18px; }
+        
+        .cta-section {
+            background-color: #f8f9fa;
+            border: 1px solid #e9ecef;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 40px;
+        }
+        .cta-section h3 { margin-bottom: 10px; color: #2c3e50; }
+        
+        ul.checked-list { list-style: none; margin: 20px 0; }
+        ul.checked-list li { position: relative; padding-left: 25px; margin-bottom: 12px; }
+        ul.checked-list li::before { content: "✓"; position: absolute; left: 0; color: #27ae60; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Arc-en-Ciel Prestations</h1>
+<nav>
+    <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="espaces-verts.html">Espaces Verts</a></li>
+        <li><a href="services-menage.html">Ménage</a></li>
+        <li><a href="web-seo.html">Web & SEO</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+        </div>
+    </header>
+
+    <main class="container" style="padding: 40px 0;">
+        
+        <!-- En-tête de la page (Hero) -->
+        <div class="web-hero">
+            <h2>Votre présence sur internet, en toute simplicité</h2>
+            <p>Vous souhaitez une page web pour votre activité mais le jargon technique vous dépasse ? Nous créons votre site internet de A à Z, sans prise de tête.</p>
+        </div>
+
+        <!-- Section Présentation et Image Collaboration -->
+        <div class="flex-container">
+            <div class="flex-col" style="padding-right: 20px;">
+                <h3>Un accompagnement pas à pas pour les artisans et commerçants</h3>
+                <p style="margin-top: 15px;">Le web est un métier, le vôtre en est un autre. Notre objectif est de concevoir une vitrine claire et efficace pour votre entreprise, tout en gérant l'intégralité des aspects techniques à votre place.</p>
+            </div>
+            <div class="flex-col">
+                <img src="photos/web-seo/collaboration.png" alt="Accompagnement création site internet artisan" class="page-img">
+            </div>
+        </div>
+
+        <!-- Section Liste à puces -->
+        <div style="max-width: 900px; margin: 40px auto 0 auto;">
+            <ul class="checked-list">
+                <li><strong>Zéro jargon :</strong> Nous échangeons en français simple, pas en langage informatique. Vous exprimez vos besoins, nous les réalisons.</li>
+                <li><strong>Clé en main :</strong> De la réservation de votre nom de domaine à la mise en ligne, nous nous occupons de chaque détail technique.</li>
+                <li><strong>Une page claire et efficace :</strong> Présentation de votre savoir-faire, horaires, zone d'intervention et coordonnées visibles au premier coup d'œil.</li>
+                <li><strong>Trouvé par vos clients locaux :</strong> Votre site est optimisé pour apparaître lorsqu'un client recherche vos services dans votre commune ou votre région.</li>
+            </ul>
+        </div>
+
+        <!-- Grille des engagements de réassurance -->
+        <div class="grid-features">
+            <div class="feature-box">
+                <h4>🤝 Accompagnement total</h4>
+                <p style="font-size: 14px; color: #666;">Pas de plateforme automatisée. Vous disposez d'un interlocuteur unique pour créer et faire évoluer votre page.</p>
+            </div>
+            <div class="feature-box">
+                <h4>💼 Vous êtes propriétaire</h4>
+                <p style="font-size: 14px; color: #666;">Le site, le nom de domaine et les contenus vous appartiennent à 100%. Aucun contrat de location masqué.</p>
+            </div>
+            <div class="feature-box">
+                <h4>📈 Visibilité Directe</h4>
+                <p style="font-size: 14px; color: #666;">Création conjointe de votre fiche Google Maps pour que les clients de votre secteur vous contactent par téléphone.</p>
+            </div>
+        </div>
+
+
+
+
+    </main>
+	
+<div style="margin-top: 5rem; padding: 4rem 2rem; background-color: #1a202c; color: #ffffff; border-radius: 12px; text-align: center; font-family: 'Inter', sans-serif;">
+    <h3 style="font-size: 1.6rem; font-weight: 600; margin-bottom: 0.5rem;">Prêt à lancer votre projet web ?</h3>
+    <p style="font-family: Arial, sans-serif; font-size: 1rem; color: #a0aec0; max-width: 500px; margin: 0 auto 2.5rem auto; line-height: 1.5;">
+        Discutons simplement de votre future page internet et de votre visibilité locale sans engagement.
+    </p>
+    
+    <div style="display: flex; justify-content: center;">
+        <!-- Action uniquement vers le Contact -->
+        <a href="contact.html" style="display: inline-block; background-color: #ffffff; color: #1a202c; padding: 12px 30px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95rem; border: 2px solid #ffffff; transition: 0.2s;">
+            <span style="margin-right: 6px; display: inline-block;">✉️</span>Contacter le conseiller Web
+        </a>
+    </div>
+</div>	
+
+<footer style="text-align: center; padding: 40px 20px; margin-top: 60px; border-top: 1px solid #eaeaea; width: 100%; box-sizing: border-box; background-color: #ffffff;">
+    <div style="margin-bottom: 1.5rem; line-height: 1.8;">
+        <a href="services-menage.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Ménage</a> | 
+        <a href="espaces-verts.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Jardin</a> | 
+        <a href="web-seo.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Web & SEO</a> | 
+        <a href="contact.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Contact</a> |
+        <a href="mentions-legales.html" style="color: #666; text-decoration: none; margin: 0 15px; font-size: 0.9rem;">Mentions Légales</a>
+    </div>
+    <p style="color: #999; font-size: 0.9rem; margin: 0;">&copy; 2026 Arc-en-Ciel Prestations - Tous droits réservés.</p>
+</footer>
+
+</body>
+</html>

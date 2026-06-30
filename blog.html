@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog & Actualités | Arc-en-Ciel Prestations</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .blog-hero {
+            background: linear-gradient(135deg, #2c3e50 0%, #1a252f 100%);
+            color: #ffffff;
+            padding: 60px 20px;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 40px;
+        }
+        .blog-hero h2 { color: #ffffff; margin-bottom: 15px; font-size: 32px; }
+        .blog-hero p { color: #bdc3c7; font-size: 18px; max-width: 800px; margin: 0 auto; }
+
+        .categories-grid {
+            display: table;
+            width: 100%;
+            table-layout: fixed;
+            border-collapse: separate;
+            border-spacing: 20px 0;
+            margin: 40px 0;
+        }
+        .category-card {
+            display: table-cell;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-top: 4px solid #2c3e50;
+            vertical-align: top;
+            text-align: center;
+        }
+        .category-card h3 { color: #2c3e50; margin-bottom: 15px; font-size: 20px; }
+        .category-card p { color: #666666; font-size: 14px; margin-bottom: 20px; line-height: 1.5; }
+        
+        .status-badge {
+            display: inline-block;
+            background-color: #f8f9fa;
+            color: #7f8c8d;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+            border: 1px dashed #bdc3c7;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Arc-en-Ciel Prestations</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="espaces-verts.html">Espaces Verts</a></li>
+                    <li><a href="services-menage.html">Ménage</a></li>
+                    <li><a href="web-seo.html">Web & SEO</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container" style="padding: 40px 0;">
+        
+        <!-- En-tête de la page -->
+        <div class="blog-hero">
+            <h2>Blog & Actualités</h2>
+            <p>Conseils pratiques, astuces d'entretien et guides numériques pour optimiser votre quotidien et votre activité.</p>
+        </div>
+
+        <!-- Grille des catégories à venir -->
+        <div class="categories-grid">
+            
+            <!-- Catégorie Ménage -->
+            <div class="category-card">
+                <span class="status-badge">Prochainement</span>
+                <h3>✨ Entretien & Maison</h3>
+                <p>Retrouvez nos futurs articles dédiés aux astuces de nettoyage, à l'organisation de votre intérieur et aux conseils pour un espace de vie sain.</p>
+                <a href="services-menage.html" class="btn" style="background-color: #2c3e50; font-size: 13px; padding: 8px 16px;">Découvrir nos services</a>
+            </div>
+
+            <!-- Catégorie Jardinage -->
+            <div class="category-card">
+                <span class="status-badge">Prochainement</span>
+                <h3>🌳 Jardin & Espaces Verts</h3>
+                <p>Nos conseils de jardinier pour réussir vos plantations, entretenir votre pelouse au fil des saisons et valoriser vos espaces extérieurs.</p>
+                <a href="espaces-verts.html" class="btn" style="background-color: #2c3e50; font-size: 13px; padding: 8px 16px;">Découvrir nos services</a>
+            </div>
+
+            <!-- Catégorie SEO -->
+            <div class="category-card">
+                <span class="status-badge">Prochainement</span>
+                <h3>📈 Web & Visibilité Locale</h3>
+                <p>Des explications simples pour comprendre le référencement, améliorer la visibilité de votre entreprise sur Google et attirer des clients locaux.</p>
+                <a href="web-seo.html" class="btn" style="background-color: #2c3e50; font-size: 13px; padding: 8px 16px;">Découvrir nos services</a>
+            </div>
+
+        </div>
+
+        <!-- Bloc de conversion bas de page -->
+        <div style="margin-top: 5rem; padding: 4rem 2rem; background-color: #1a202c; color: #ffffff; border-radius: 12px; text-align: center; font-family: 'Inter', sans-serif;">
+            <h3 style="font-size: 1.6rem; font-weight: 600; margin-bottom: 0.5rem;">Un projet ou besoin d'une intervention ?</h3>
+            <p style="font-family: Arial, sans-serif; font-size: 1rem; color: #a0aec0; max-width: 500px; margin: 0 auto 2.5rem auto; line-height: 1.5;">
+                N'attendez pas la publication de nos articles. Nos équipes sont disponibles pour répondre à vos demandes dès maintenant.
+            </p>
+            <div style="display: flex; justify-content: center;">
+                <a href="contact.html" style="display: inline-block; background-color: #ffffff; color: #1a202c; padding: 12px 30px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95rem; border: 2px solid #ffffff; transition: 0.2s;">
+                    <span style="margin-right: 6px; display: inline-block;">✉️</span>Nous contacter directement
+                </a>
+            </div>
+        </div>
+
+    </main>
+
+    <footer style="text-align: center; padding: 40px 20px; margin-top: 60px; border-top: 1px solid #eaeaea; width: 100%; box-sizing: border-box; background-color: #ffffff;">
+        <div style="margin-bottom: 1.5rem; line-height: 1.8;">
+            <a href="services-menage.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Ménage</a> | 
+            <a href="espaces-verts.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Jardin</a> | 
+            <a href="web-seo.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Web & SEO</a> | 
+            <a href="contact.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Contact</a> | 
+            <a href="blog.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Blog & Actu</a> | 
+            <a href="mentions-legales.html" style="color: #666; text-decoration: none; margin: 0 15px; font-size: 0.9rem;">Mentions Légales</a>
+        </div>
+        <p style="color: #999; font-size: 0.9rem; margin: 0;">&copy; 2026 Arc-en-Ciel Prestations - Tous droits réservés.</p>
+    </footer>
+
+</body>
+</html>
