@@ -10,6 +10,12 @@ body {
     line-height: 1.6;
     color: #333333;
     background-color: #f9f9f9;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 .container {
@@ -25,24 +31,32 @@ header {
     padding: 20px 0;
 }
 
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px 20px;
+}
+
 header h1 {
-    display: inline-block;
     font-size: 24px;
     color: #2c3e50;
 }
 
 nav {
-    float: right;
-    margin-top: 5px;
+    margin-top: 0;
 }
 
 nav ul {
     list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 20px;
 }
 
 nav ul li {
-    display: inline-block;
-    margin-left: 20px;
+    margin-left: 0;
 }
 
 nav ul li a {
@@ -82,20 +96,18 @@ nav ul li a:hover {
 }
 
 .services-grid .container {
-    display: table;
-    width: 100%;
-    table-layout: fixed;
-    border-collapse: separate;
-    border-spacing: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .card {
-    display: table-cell;
+    display: block;
+    flex: 1 1 260px;
     background: #ffffff;
     padding: 30px;
     border-radius: 8px;
     text-align: center;
-    vertical-align: top;
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     border-top: 5px solid #ccc;
 }
@@ -164,42 +176,24 @@ footer {
     font-size: 14px;
 }
 
-.grid-features {
-    display: flex;
-    align-items: stretch; /* Aligne le bas de toutes les cartes */
-    justify-content: space-between;
-    gap: 20px;
+/* ============================================================
+   Responsive — Mobile & tablette
+   ============================================================ */
+@media (max-width: 768px) {
+    .container { width: 92%; }
+
+    header .container { justify-content: center; text-align: center; }
+    nav ul { justify-content: center; }
+
+    .hero { padding: 40px 0; }
+    .hero h2 { font-size: 22px; }
+    .hero p { font-size: 15px; }
+
+    .services-grid { padding: 40px 0; }
+    .card { flex: 1 1 100%; }
 }
 
-.feature-box {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    background: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+@media (max-width: 480px) {
+    header h1 { font-size: 20px; }
+    nav ul li a { font-size: 14px; }
 }
-
-.feature-box img {
-    width: 100%;
-    aspect-ratio: 1 / 1; /* Force la même hauteur pour chaque image */
-    object-fit: cover; /* Recadre sans déformer */
-    border-radius: 4px;
-    margin-bottom: 15px;
-}
-
-.feature-box h4 {
-    margin-top: 0;
-    margin-bottom: 10px;
-}
-
-.feature-box p {
-    font-size: 14px;
-    color: #666;
-    margin: 0;
-    line-height: 1.5;
-}
-
-
-
