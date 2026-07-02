@@ -163,3 +163,43 @@ footer {
     margin-top: 40px;
     font-size: 14px;
 }
+
+.grid-features {
+    display: flex;
+    align-items: stretch; /* Aligne le bas de toutes les cartes */
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.feature-box {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.feature-box img {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Force la même hauteur pour chaque image */
+    object-fit: cover; /* Recadre sans déformer */
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.feature-box h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.feature-box p {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+    line-height: 1.5;
+}
+
+
+
