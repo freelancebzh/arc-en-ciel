@@ -11,9 +11,11 @@ Public visé : artisans, commerçants et petites entreprises locales, principale
 - [Notre offre](https://www.arc-en-ciel-services.fr/offre.html): détail de ce qui est inclus (site, nom de domaine, référencement local, fiche Google Maps), déroulé du projet en 5 étapes, tarifs indicatifs sur devis, foire aux questions.
 - [Contact](https://www.arc-en-ciel-services.fr/contact.html): coordonnées et formulaire de contact.
 - [Blog & Actu](https://www.arc-en-ciel-services.fr/blog.html): articles courts sur la présence en ligne des artisans et commerçants locaux.
+- [Lexique](https://www.arc-en-ciel-services.fr/lexique.html): vocabulaire du web (nom de domaine, hébergement, référencement, fiche Google Maps, QR code...) expliqué en langage simple, sans jargon informatique, destiné à un public d'artisans et commerçants non familiers du web.
 - [Générateur de site express](https://www.arc-en-ciel-services.fr/generateur.html): outil gratuit côté navigateur pour générer une page HTML statique simple, sans inscription.
 
 ## Optional
 
-- [Sites utiles](https://www.arc-en-ciel-services.fr/liens-utiles.html): sélection d'outils gratuits externes (compression d'images, transfert de fichiers, fiche Google Business, générateur de QR code).
+- [Sites utiles](https://www.arc-en-ciel-services.fr/liens-utiles.html): documentation officielle et outils gratuits liés au web et au SEO (Google Search Central, Google PageSpeed Insights, iLoveIMG, iLovePDF, 123apps, Remove.bg, Smash, Google Business Profile).
+- [Plan du site](https://www.arc-en-ciel-services.fr/site-map.html): liste de toutes les pages du site.
 - [Mentions légales](https://www.arc-en-ciel-services.fr/mentions-legales.html): informations légales de l'éditeur du site.
