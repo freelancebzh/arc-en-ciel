@@ -12,7 +12,7 @@
 
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="index.html"><span class="mark">AW</span>Arc-en-Ciel Web</a>
+    <a class="brand" href="index.html"><img class="brand-logo" src="assets/logo-mark.png" alt="">Arc-en-Ciel Web</a>
     <nav class="primary" aria-label="Navigation principale">
       <ul>
         <li><a href="index.html">Accueil</a></li>
@@ -70,7 +70,6 @@
           <li><a href="mentions-legales.html">Mentions légales</a></li>
         </ul>
       </nav>
-      <p class="cookie-note">Arc-en-Ciel Web utilise des cookies pour analyser le trafic du site via Google Analytics. Vous pouvez accepter ou refuser ces traceurs. <a href="#">Accepter</a> · <a href="#">Refuser</a></p>
     </div>
     <div class="foot-bottom">
       <span>© 2026 Arc-en-Ciel Web — Tous droits réservés.</span>
@@ -78,6 +77,38 @@
     </div>
   </div>
 </footer>
+
+
+<div id="cookie-banner" class="cookie-banner" role="dialog" aria-live="polite" aria-label="Consentement aux cookies">
+  <p>Ce site utilise des cookies de mesure d'audience (Google Analytics). Vous pouvez accepter ou refuser ces traceurs.</p>
+  <div class="cookie-actions">
+    <button type="button" class="cookie-accept" onclick="acceptCookies()">Accepter</button>
+    <button type="button" class="cookie-reject" onclick="rejectCookies()">Refuser</button>
+  </div>
+</div>
+<script>
+(function(){
+  var banner = document.getElementById('cookie-banner');
+  var consent = localStorage.getItem('cookie_consent');
+  if(!consent){
+    banner.classList.add('show');
+  } else if(consent === 'accepted'){
+    loadAnalytics();
+  }
+})();
+function acceptCookies(){
+  localStorage.setItem('cookie_consent','accepted');
+  document.getElementById('cookie-banner').classList.remove('show');
+  loadAnalytics();
+}
+function rejectCookies(){
+  localStorage.setItem('cookie_consent','rejected');
+  document.getElementById('cookie-banner').classList.remove('show');
+}
+function loadAnalytics(){
+  // Insérer ici le script Google Analytics (GA4) une fois l'identifiant de mesure disponible
+}
+</script>
 
 </body>
 </html>

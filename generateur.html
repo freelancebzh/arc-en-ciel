@@ -12,7 +12,7 @@
 
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="index.html"><span class="mark">AW</span>Arc-en-Ciel Web</a>
+    <a class="brand" href="index.html"><img class="brand-logo" src="assets/logo-mark.png" alt="">Arc-en-Ciel Web</a>
     <nav class="primary" aria-label="Navigation principale">
       <ul>
         <li><a href="index.html">Accueil</a></li>
@@ -100,7 +100,6 @@
           <li><a href="mentions-legales.html">Mentions légales</a></li>
         </ul>
       </nav>
-      <p class="cookie-note">Arc-en-Ciel Web utilise des cookies pour analyser le trafic du site via Google Analytics. Vous pouvez accepter ou refuser ces traceurs. <a href="#">Accepter</a> · <a href="#">Refuser</a></p>
     </div>
     <div class="foot-bottom">
       <span>© 2026 Arc-en-Ciel Web — Tous droits réservés.</span>
@@ -131,7 +130,39 @@ document.getElementById('genBtn').addEventListener('click', function(){
   var couleur = document.getElementById('couleur').value;
   var nomSafe = escapeHtml(nom);
 
-  var html = "<!DOCTYPE html>\n<html lang=\"fr\">\n<head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>" + nomSafe + "</title>\n<style>\n  body{font-family:Arial,Helvetica,sans-serif; margin:0; color:#1E2521; background:#F1EAD9;}\n  header{background:" + couleur + "; color:#fff; padding:40px 24px;}\n  header h1{margin:0 0 8px; font-size:2rem;}\n  main{max-width:680px; margin:0 auto; padding:32px 24px;}\n  section{margin-bottom:28px;}\n  h2{font-size:1.1rem; text-transform:uppercase; letter-spacing:.05em; color:" + couleur + ";}\n  footer{padding:20px 24px; font-size:.85rem; color:#555; border-top:1px solid #ddd; text-align:center;}\n  a{color:" + couleur + ";}\n</style>\n</head>\n<body>\n<header>\n  <h1>" + nomSafe + "</h1>\n  <p>" + accroche + "</p>\n</header>\n<main>\n  <section>\n    <h2>À propos</h2>\n    <p>" + (description || "Description à compléter.") + "</p>\n  </section>\n  <section>\n    <h2>Horaires</h2>\n    <p>" + (horaires || "Horaires à compléter.") + "</p>\n  </section>\n  <section>\n    <h2>Contact</h2>\n    <p>" + (telephone ? "Téléphone : " + telephone + "<br>" : "") + (email ? "Email : <a href=\"mailto:" + email + "\">" + email + "</a><br>" : "") + (adresse ? "Adresse / zone : " + adresse : "") + "</p>\n  </section>\n</main>\n<footer>\n  Page générée avec le générateur gratuit d'Arc-en-Ciel Web.\n</footer>\n</body>\n</html>\n";
+  var html = "<!DOCTYPE html>\n<html lang=\"fr\">\n<head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>" + nomSafe + "</title>\n<style>\n  body{font-family:Arial,Helvetica,sans-serif; margin:0; color:#1E2521; background:#F1EAD9;}\n  header{background:" + couleur + "; color:#fff; padding:40px 24px;}\n  header h1{margin:0 0 8px; font-size:2rem;}\n  main{max-width:680px; margin:0 auto; padding:32px 24px;}\n  section{margin-bottom:28px;}\n  h2{font-size:1.1rem; text-transform:uppercase; letter-spacing:.05em; color:" + couleur + ";}\n  footer{padding:20px 24px; font-size:.85rem; color:#555; border-top:1px solid #ddd; text-align:center;}\n  a{color:" + couleur + ";}\n</style>\n</head>\n<body>\n<header>\n  <h1>" + nomSafe + "</h1>\n  <p>" + accroche + "</p>\n</header>\n<main>\n  <section>\n    <h2>À propos</h2>\n    <p>" + (description || "Description à compléter.") + "</p>\n  </section>\n  <section>\n    <h2>Horaires</h2>\n    <p>" + (horaires || "Horaires à compléter.") + "</p>\n  </section>\n  <section>\n    <h2>Contact</h2>\n    <p>" + (telephone ? "Téléphone : " + telephone + "<br>" : "") + (email ? "Email : <a href=\"mailto:" + email + "\">" + email + "</a><br>" : "") + (adresse ? "Adresse / zone : " + adresse : "") + "</p>\n  </section>\n</main>\n<footer>\n  Page générée avec le générateur gratuit d'Arc-en-Ciel Web.\n</footer>\n
+<div id="cookie-banner" class="cookie-banner" role="dialog" aria-live="polite" aria-label="Consentement aux cookies">
+  <p>Ce site utilise des cookies de mesure d'audience (Google Analytics). Vous pouvez accepter ou refuser ces traceurs.</p>
+  <div class="cookie-actions">
+    <button type="button" class="cookie-accept" onclick="acceptCookies()">Accepter</button>
+    <button type="button" class="cookie-reject" onclick="rejectCookies()">Refuser</button>
+  </div>
+</div>
+<script>
+(function(){
+  var banner = document.getElementById('cookie-banner');
+  var consent = localStorage.getItem('cookie_consent');
+  if(!consent){
+    banner.classList.add('show');
+  } else if(consent === 'accepted'){
+    loadAnalytics();
+  }
+})();
+function acceptCookies(){
+  localStorage.setItem('cookie_consent','accepted');
+  document.getElementById('cookie-banner').classList.remove('show');
+  loadAnalytics();
+}
+function rejectCookies(){
+  localStorage.setItem('cookie_consent','rejected');
+  document.getElementById('cookie-banner').classList.remove('show');
+}
+function loadAnalytics(){
+  // Insérer ici le script Google Analytics (GA4) une fois l'identifiant de mesure disponible
+}
+</script>
+
+</body>\n</html>\n";
 
   var blob = new Blob([html], {type: "text/html"});
   var url = URL.createObjectURL(blob);
@@ -145,6 +176,38 @@ document.getElementById('genBtn').addEventListener('click', function(){
   URL.revokeObjectURL(url);
   document.getElementById('genStatus').textContent = "Votre fichier " + fileName + ".html a été téléchargé.";
 });
+</script>
+
+
+<div id="cookie-banner" class="cookie-banner" role="dialog" aria-live="polite" aria-label="Consentement aux cookies">
+  <p>Ce site utilise des cookies de mesure d'audience (Google Analytics). Vous pouvez accepter ou refuser ces traceurs.</p>
+  <div class="cookie-actions">
+    <button type="button" class="cookie-accept" onclick="acceptCookies()">Accepter</button>
+    <button type="button" class="cookie-reject" onclick="rejectCookies()">Refuser</button>
+  </div>
+</div>
+<script>
+(function(){
+  var banner = document.getElementById('cookie-banner');
+  var consent = localStorage.getItem('cookie_consent');
+  if(!consent){
+    banner.classList.add('show');
+  } else if(consent === 'accepted'){
+    loadAnalytics();
+  }
+})();
+function acceptCookies(){
+  localStorage.setItem('cookie_consent','accepted');
+  document.getElementById('cookie-banner').classList.remove('show');
+  loadAnalytics();
+}
+function rejectCookies(){
+  localStorage.setItem('cookie_consent','rejected');
+  document.getElementById('cookie-banner').classList.remove('show');
+}
+function loadAnalytics(){
+  // Insérer ici le script Google Analytics (GA4) une fois l'identifiant de mesure disponible
+}
 </script>
 
 </body>
