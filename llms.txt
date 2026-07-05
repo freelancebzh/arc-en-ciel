@@ -1,0 +1,19 @@
+# Arc-en-Ciel Web
+
+> Arc-en-Ciel Web conçoit des sites vitrines et travaille le référencement local pour les artisans, commerçants et petites entreprises de Domagné (Ille-et-Vilaine, France) et des communes alentours. Accompagnement direct par un interlocuteur unique, sans plateforme automatisée : le client reste propriétaire de son nom de domaine et de son site.
+
+Zone d'intervention : Domagné et environs (Ille-et-Vilaine, France).
+Public visé : artisans, commerçants et petites entreprises locales, principalement contactés par démarchage direct plutôt que via la recherche en ligne.
+
+## Pages
+
+- [Accueil](https://www.arc-en-ciel-services.fr/index.html): présentation générale de l'offre et de la méthode d'accompagnement.
+- [Notre offre](https://www.arc-en-ciel-services.fr/offre.html): détail de ce qui est inclus (site, nom de domaine, référencement local, fiche Google Maps), déroulé du projet en 5 étapes, tarifs indicatifs sur devis, foire aux questions.
+- [Contact](https://www.arc-en-ciel-services.fr/contact.html): coordonnées et formulaire de contact.
+- [Blog & Actu](https://www.arc-en-ciel-services.fr/blog.html): articles courts sur la présence en ligne des artisans et commerçants locaux.
+- [Générateur de site express](https://www.arc-en-ciel-services.fr/generateur.html): outil gratuit côté navigateur pour générer une page HTML statique simple, sans inscription.
+
+## Optional
+
+- [Sites utiles](https://www.arc-en-ciel-services.fr/liens-utiles.html): sélection d'outils gratuits externes (compression d'images, transfert de fichiers, fiche Google Business, générateur de QR code).
+- [Mentions légales](https://www.arc-en-ciel-services.fr/mentions-legales.html): informations légales de l'éditeur du site.
