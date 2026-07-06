@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KLNWW7NJ');</script>
+<!-- End Google Tag Manager -->
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Devis Gratuit | Arc-en-Ciel Services Domagné</title>
+    <meta name="description" content="Demandez votre devis gratuit pour un service de ménage, de jardinage. Réponse rapide, sans engagement.">
+    <link rel="canonical" href="https://www.arc-en-ciel-services.fr/service-a-la-personnne/contact.html">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .contact-container {
+            max-width: 600px;
+            margin: 40px auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            font-family: Arial, sans-serif;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 1rem;
+        }
+        .form-group textarea {
+            resize: vertical;
+            height: 120px;
+        }
+        .btn-submit {
+            background-color: #2c3e50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            width: 100%;
+            transition: background 0.2s;
+        }
+        .btn-submit:hover {
+            background-color: #1a252f;
+        }
+        /* Style pour le Captcha de protection */
+        .h-captcha {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+    <!-- Script requis pour le Captcha (hCaptcha) -->
+    <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLNWW7NJ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+    <header>
+        <div class="container">
+            <h1>Arc-en-Ciel Services à la Personne à Domagné</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="espaces-verts.html">Espaces Verts</a></li>
+                    <li><a href="services-menage.html">Ménage</a></li>
+                 
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <div class="contact-container">
+            <h2 style="text-align: center; color: #2c3e50; margin-bottom: 30px;">Demande de devis ou renseignement</h2>
+            
+            <!-- Formulaire lié à Web3Forms -->
+            <form action="https://api.web3forms.com/submit" method="POST">
+                
+                <!-- Clé d'accès à générer (voir instructions ci-dessous) -->
+                <input type="hidden" name="access_key" value="5f69cbfc-d7bc-4039-9607-198dfc494e57">
+                
+                <!-- Redirection après envoi réussi -->
+                <input type="hidden" name="redirect" value="https://www.arc-en-ciel-services.fr/merci.html">
+
+                <!-- Protection anti-spam invisible (Honeypot) -->
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                <div class="form-group">
+                    <label for="name">Nom / Prénom</label>
+                    <input type="text" id="name" name="name" required placeholder="Votre nom complet">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Adresse E-mail</label>
+                    <input type="email" id="email" name="email" required placeholder="@">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Téléphone</label>
+                    <input type="tel" id="phone" name="phone" placeholder="06 ...">
+                </div>
+
+                <div class="form-group">
+                    <label for="service">Service concerné</label>
+                    <select id="service" name="service" required>
+                        <option value="" disabled selected>Choisissez un service</option>
+                        <option value="menage">Ménage & Entretien intérieur</option>
+                        <option value="jardin">Espaces Verts & Jardinage</option>
+                 
+                        <option value="autre">Autre demande</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Votre message / Détails du projet</label>
+                    <textarea id="message" name="message" required placeholder="Décrivez votre besoin précisément..."></textarea>
+                </div>
+
+                <!-- Bloc Captcha Visuel -->
+                <div class="h-captcha" data-captcha="true"></div>
+
+                <button type="submit" class="btn-submit">Envoyer ma demande</button>
+
+            </form>
+        </div>
+
+    </main>
+
+    <!-- Bloc SEO / Présentation locale -->
+    <section style="background-color: #ffffff; padding: 40px 0 10px; border-top: 1px solid #eaeaea;">
+        <div class="container" style="max-width: 700px; text-align: center;">
+            <p style="font-size: 14.5px; color: #666; line-height: 1.7;">
+                Arc-en-Ciel Services intervient à <strong>Domagné</strong> et dans les communes voisines pour vos besoins en <a href="services-menage.html" style="color:#0275d8;font-weight:600;">ménage</a> et/ou <a href="espaces-verts.html" style="color:#5cb85c;font-weight:600;">jardinage</a>. Remplissez le formulaire ci-dessus, nous revenons vers vous rapidement pour établir un devis gratuit et sans engagement.
+            </p>
+        </div>
+    </section>
+
+    <footer style="text-align: center; padding: 40px 20px; margin-top: 60px; border-top: 1px solid #eaeaea; width: 100%; box-sizing: border-box; background-color: #ffffff;">
+        <div style="margin-bottom: 1.5rem; line-height: 1.8;">
+            <a href="services-menage.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Ménage</a> | 
+            <a href="espaces-verts.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Jardin</a> | 
+           
+            <a href="contact.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Contact</a> | 
+            <a href="blog.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Blog & Actu</a> | 
+            <a href="liens-utiles.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Sites Utiles</a> |
+            <a href="mentions-legales.html" style="color: #666; text-decoration: none; margin: 0 15px; font-size: 0.9rem;">Mentions Légales</a> |
+            <a href="sitemap.html" style="color: #666; text-decoration: none; margin: 0 15px; font-size: 0.9rem;">Plan du Site</a>
+        </div>
+        <p style="color: #999; font-size: 0.9rem; margin: 0;">&copy; 2026 <a href="https://www.arc-en-ciel-services.fr" target="_blank" rel="noopener">Arc-en-Ciel Services Web</a> - Tous droits réservés.</p>
+    </footer>
+	
+	<div id="cookie-banner" style="position: fixed; bottom: 20px; left: 20px; right: 20px; background: #1a202c; color: white; padding: 15px 20px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); z-index: 10000; font-family: Arial, sans-serif; font-size: 0.9rem; display: none;">
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px;">
+        <div style="flex: 1 1 240px;">
+            Arc-en-Ciel Services utilise des cookies pour analyser le trafic du site via Google Analytics. Vous pouvez accepter ou refuser ces traceurs.
+        </div>
+        <div style="flex: 0 0 auto; white-space: nowrap;">
+            <button onclick="acceptCookies()" style="background: #27ae60; color: white; border: none; padding: 8px 15px; border-radius: 4px; cursor: pointer; font-weight: bold; margin-right: 10px;">Accepter</button>
+            <button onclick="rejectCookies()" style="background: #e74c3c; color: white; border: none; padding: 8px 15px; border-radius: 4px; cursor: pointer; font-weight: bold;">Refuser</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    window.onload = function() {
+        if (!localStorage.getItem('cookie_consent')) {
+            document.getElementById('cookie-banner').style.display = 'block';
+        } else if (localStorage.getItem('cookie_consent') === 'accepted') {
+            loadAnalytics();
+        }
+    };
+
+    function acceptCookies() {
+        localStorage.setItem('cookie_consent', 'accepted');
+        document.getElementById('cookie-banner').style.display = 'none';
+        loadAnalytics();
+    }
+
+    function rejectCookies() {
+        localStorage.setItem('cookie_consent', 'rejected');
+        document.getElementById('cookie-banner').style.display = 'none';
+    }
+
+    function loadAnalytics() {
+        // Insère ici ton script Google Analytics (GA4) uniquement si l'utilisateur accepte
+        // Exemple :
+        // var script = document.createElement('script');
+        // script.src = "https://www.googletagmanager.com/gtag/js?id=G-TON-ID";
+        // document.head.appendChild(script);
+    }
+</script>
+
+</body>
+</html>
