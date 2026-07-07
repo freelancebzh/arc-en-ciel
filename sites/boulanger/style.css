@@ -297,22 +297,24 @@ em { font-style: italic; color: var(--color-clay-dark); }
   justify-content: center;
 }
 
-/* Signature visuelle : un "blob" organique façon pâte qui lève,
-   plutôt qu'une simple image rectangulaire. */
-.hero-blob {
-  width: min(100%, 420px);
-  aspect-ratio: 1 / 1;
-  background:
-    radial-gradient(circle at 32% 28%, rgba(255,255,255,0.35), transparent 45%),
-    linear-gradient(160deg, #C97C42 0%, #8F4A22 55%, #5E2E15 100%);
-  border-radius: 63% 37% 54% 46% / 45% 42% 58% 55%;
-  box-shadow: var(--shadow-soft);
-  animation: blob-breathe 9s ease-in-out infinite;
+/* Signature visuelle : la photo du pain, montrée en entier, dans un
+   cadre aux coins doux plutôt qu'en "blob" organique. */
+.hero-photo{
+  width: 100%;
+  max-width: 560px;        /* un peu plus grande qu'avant */
+  aspect-ratio: 4 / 3;      /* proportion réelle de la photo fournie : rien n'est coupé */
+  object-fit: contain;      /* garantit que l'image entière reste visible */
+  background: var(--color-paper);
+  border-radius: 18px;
+  box-shadow: 0 24px 48px -20px rgba(0,0,0,.25);
+  display: block;
+  margin: 0 auto;           /* centré sur mobile */
 }
 
-@keyframes blob-breathe {
-  0%, 100% { border-radius: 63% 37% 54% 46% / 45% 42% 58% 55%; }
-  50% { border-radius: 48% 52% 40% 60% / 55% 48% 52% 45%; }
+@media (max-width: 640px){
+  .hero-photo{
+    max-width: 400px;       /* réduite sur mobile, mais toujours entière */
+  }
 }
 
 .hero-stamp {
@@ -338,6 +340,8 @@ em { font-style: italic; color: var(--color-clay-dark); }
   padding: 0.5rem;
 }
 .hero-stamp-sep { opacity: 0.5; }
+
+
 
 /* --------------------------------------------------------------------
    7. MENU DU JOUR — cartes "ticket" déchiré
@@ -385,6 +389,29 @@ em { font-style: italic; color: var(--color-clay-dark); }
   color: var(--color-wheat);
   margin-bottom: 0.3rem;
 }
+
+/* Photo miniature en haut de chaque ticket */
+.ticket-photo{
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 0 0 0.9rem;
+  box-shadow: var(--shadow-soft);
+}
+/* Repère visuel neutre pour les plats sans photo réelle encore fournie —
+   à remplacer par <img class="ticket-photo" src="..."> dès que la photo existe */
+.ticket-photo--placeholder{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-paper);
+  border: 1px dashed var(--color-line);
+  box-shadow: none;
+  font-size: 1.8rem;
+}
+
 .ticket h3 { margin-bottom: 0.4rem; }
 .ticket-desc {
   font-size: 0.92rem;

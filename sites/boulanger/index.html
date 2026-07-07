@@ -12,7 +12,7 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="Le Fournil de l'Aube — Boulangerie artisanale à Domagné">
 <meta property="og:description" content="Pain au levain naturel, cuisson au feu de bois. Le pain se lève avant le soleil.">
-<meta property="og:image" content="assets/hero-pain-levain.jpg">
+<meta property="og:image" content="assets/pain.jpg">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:url" content="https://www.lefournildelaube.fr/">
 
@@ -32,7 +32,7 @@
   "@context": "https://schema.org",
   "@type": "Bakery",
   "name": "Le Fournil de l'Aube",
-  "image": "https://www.lefournildelaube.fr/assets/hero-pain-levain.jpg",
+  "image": "https://www.lefournildelaube.fr/assets/pain.jpg",
   "@id": "https://www.lefournildelaube.fr/",
   "url": "https://www.lefournildelaube.fr/",
   "telephone": "+33299000000",
@@ -119,14 +119,16 @@
         </div>
       </div>
 
-      <div class="hero-visual">
-        <div class="hero-blob" role="img" aria-label="Pain au levain artisanal tout juste sorti du four, croûte dorée et craquelée"></div>
-        <div class="hero-stamp" aria-hidden="true">
-          <span>Levain naturel</span>
-          <span class="hero-stamp-sep">•</span>
-          <span>Feu de bois</span>
-        </div>
-      </div>
+      
+	  <div class="hero-visual">
+  <img src="assets/pain.jpg"
+       alt="Pain au levain artisanal tout juste sorti du four, croûte dorée et craquelée"
+       class="hero-photo"
+       width="640" height="640"
+       fetchpriority="high">
+ 
+</div>
+	  
     </div>
   </section>
 
@@ -134,12 +136,13 @@
   <section class="menu-du-jour" id="menu-du-jour" aria-labelledby="menu-title">
     <div class="wrap">
       <p class="eyebrow eyebrow-center">Fournée du jour</p>
-      <h2 id="menu-title">Ce qui sort du four ce matin</h2>
+      <h2 id="menu-title">Ce qui sort du four ce matin :</h2>
       <p class="section-lede">Une sélection courte, renouvelée chaque jour selon la farine, la saison et l'humeur du levain.</p>
 
       <div class="ticket-grid">
 
         <article class="ticket">
+          <img class="ticket-photo" src="assets/pain.jpg" alt="Miche de campagne tout juste sortie du four" width="400" height="300" loading="lazy">
           <p class="ticket-cat">Pain</p>
           <h3>Miche de campagne</h3>
           <p class="ticket-desc">Farine T80 locale, levain liquide, 24h de pousse lente. Croûte épaisse, mie alvéolée.</p>
@@ -147,6 +150,7 @@
         </article>
 
         <article class="ticket ticket-alt">
+          <div class="ticket-photo ticket-photo--placeholder" aria-hidden="true">🌾</div>
           <p class="ticket-cat">Pain</p>
           <h3>Petit épeautre &amp; noix</h3>
           <p class="ticket-desc">Épeautre ancien, cerneaux de noix torréfiés, cuisson longue à basse température.</p>
@@ -154,6 +158,7 @@
         </article>
 
         <article class="ticket">
+          <div class="ticket-photo ticket-photo--placeholder" aria-hidden="true">🥐</div>
           <p class="ticket-cat">Viennoiserie</p>
           <h3>Croissant pur beurre</h3>
           <p class="ticket-desc">Beurre AOP de baratte, feuilletage 27 tours, pointe de sel de Guérande.</p>
@@ -161,6 +166,7 @@
         </article>
 
         <article class="ticket ticket-alt">
+          <img class="ticket-photo" src="assets/kouign-amann.png" alt="Kouign-amann doré et caramélisé" width="400" height="300" loading="lazy">
           <p class="ticket-cat">Viennoiserie</p>
           <h3>Kouign-amann</h3>
           <p class="ticket-desc">Caramélisation lente, croûte cassante, cœur fondant. Une pièce, un moment.</p>
@@ -168,6 +174,7 @@
         </article>
 
         <article class="ticket">
+          <div class="ticket-photo ticket-photo--placeholder" aria-hidden="true">🍮</div>
           <p class="ticket-cat">Pâtisserie</p>
           <h3>Flan pâtissier</h3>
           <p class="ticket-desc">Vanille de Madagascar infusée, pâte brisée maison, cuisson au four à sole.</p>
@@ -175,6 +182,7 @@
         </article>
 
         <article class="ticket ticket-alt">
+          <div class="ticket-photo ticket-photo--placeholder" aria-hidden="true">🫒</div>
           <p class="ticket-cat">Salé</p>
           <h3>Fougasse aux herbes</h3>
           <p class="ticket-desc">Huile d'olive, herbes du jardin, olives noires. Idéale à partager à l'apéritif.</p>
