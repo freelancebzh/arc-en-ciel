@@ -11,8 +11,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ménage, Jardin à Domagné | Arc-en-Ciel Services à la personne</title>
-    <meta name="description" content="Arc-en-Ciel Services à Domagné : ménage à domicile, entretien de jardin. Devis gratuit et crédit d'impôt 50%.">
+    <title>Ménage, Jardin & Accompagnement à Domagné | Arc-en-Ciel Services</title>
+    <meta name="description" content="Arc-en-Ciel Services à Domagné : ménage à domicile, entretien de jardin, accompagnement des personnes âgées. Devis gratuit et crédit d'impôt 50%.">
     <link rel="canonical" href="https://www.arc-en-ciel-services.fr/">
     <link rel="stylesheet" href="style.css">
     <script type="application/ld+json">
@@ -69,7 +69,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               "url": "https://www.arc-en-ciel-services.fr/espaces-verts.html"
             }
           },
-
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Accompagnement à la vie quotidienne",
+              "url": "https://www.arc-en-ciel-services.fr/accompagnement.html"
+            }
           }
         ]
       }
@@ -84,13 +90,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <header>
         <div class="container">
-            <h1>Services à la Personne à Domagné : ménage et jardins</h1>
+            <div class="brand">
+                <svg class="arc-mark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                    <path d="M8 82 A 42 42 0 0 1 92 82" fill="none" stroke="#2E86DE" stroke-width="9" stroke-linecap="round"/>
+                    <path d="M19 82 A 31 31 0 0 1 81 82" fill="none" stroke="#3CA35A" stroke-width="9" stroke-linecap="round"/>
+                    <path d="M30 82 A 20 20 0 0 1 70 82" fill="none" stroke="#F2B705" stroke-width="9" stroke-linecap="round"/>
+                    <path d="M41 82 A 9 9 0 0 1 59 82" fill="none" stroke="#E0703A" stroke-width="9" stroke-linecap="round"/>
+                </svg>
+                <h1>Services à la Personne à Domagné : ménage, jardin & accompagnement</h1>
+            </div>
 <nav>
     <ul>
         <li><a href="index.html">Accueil</a></li>
         <li><a href="espaces-verts.html">Espaces Verts</a></li>
         <li><a href="services-menage.html">Ménage</a></li>
-
+        <li><a href="accompagnement.html">Accompagnement</a></li>
         <li><a href="contact.html">Contact</a></li>
     </ul>
 </nav>
@@ -98,73 +112,97 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </header>
 
     <main>
-        <!-- Section Introduction -->
-        <section class="hero">
-            <div class="container">
-                <h2>Des services adaptés à vos besoins sur Domagné et alentours</h2>
-                <p>Que ce soit pour l'entretien de votre quotidien (<a href="services-menage.html">ménage</a> ou <a href="espaces-verts.html">espaces verts</a>), découvrez nos pôles d'expertise.</p>
+        <!-- Section Introduction — hero fractionné -->
+        <section class="hero-split">
+            <div class="container hero-split-inner">
+                <div class="hero-copy">
+                    <span class="eyebrow">Domagné & environs</span>
+                    <h2>Le quotidien, plus léger.</h2>
+                    <p>Ménage, jardin, accompagnement — un seul interlocuteur pour prendre soin de votre maison et de vos proches, avec 50% de crédit d'impôt immédiat.</p>
+                    <a href="contact.html" class="cta-btn filled-orange">Demander un devis gratuit</a>
+                </div>
+                <div class="hero-art" aria-hidden="true">
+                    <svg viewBox="0 0 440 360" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 320 A 200 200 0 0 1 420 320" fill="none" stroke="#2E86DE" stroke-width="26" stroke-linecap="round"/>
+                        <path d="M62 320 A 158 158 0 0 1 378 320" fill="none" stroke="#3CA35A" stroke-width="26" stroke-linecap="round"/>
+                        <path d="M104 320 A 116 116 0 0 1 336 320" fill="none" stroke="#F2B705" stroke-width="26" stroke-linecap="round"/>
+                        <path d="M146 320 A 74 74 0 0 1 294 320" fill="none" stroke="#E0703A" stroke-width="26" stroke-linecap="round"/>
+                        <path d="M188 320 A 32 32 0 0 1 252 320" fill="none" stroke="#B15DC7" stroke-width="26" stroke-linecap="round"/>
+                        <circle cx="80" cy="70" r="9" fill="#F2B705"/>
+                        <circle cx="370" cy="110" r="6" fill="#3CA35A"/>
+                        <circle cx="340" cy="50" r="5" fill="#B15DC7"/>
+                    </svg>
+                </div>
             </div>
         </section>
 
-        <!-- Section Aiguillage / Les 3 Blocs -->
-        <section class="services-grid">
+        <!-- Section Aiguillage / Les 3 pôles -->
+        <section class="services-grid-offset">
             <div class="container">
-                
-                <!-- Bloc Espaces Verts -->
-                <div class="card green">
-                    <img src="photos/general/logo vert.png" alt="Logo Arc-en-Ciel Espaces Verts">
-                    <h3>Espaces Verts Domagnéens</h3>
-                    <p>Tonte, taille, entretien de jardins et aménagements extérieurs pour les particuliers.</p>
-                    <a href="espaces-verts.html" class="btn">Découvrir les prestations</a>
-                </div>
 
-                <!-- Bloc Ménage -->
-                <div class="card blue">
-                    <img src="photos/general/logo.png" alt="Logo Arc-en-Ciel Services de Ménage">
-                    <h3>Services de Ménage Domagnéens</h3>
+                <a href="services-menage.html" class="service-tile t-blue">
+                    <div class="tile-icon" style="background:#DCEBFB;">
+                        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#2E86DE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M9 21V9a3 3 0 0 1 3-3v0a3 3 0 0 1 3 3v12"/><path d="M9 9 5 5"/><path d="m19 5-4 4"/></svg>
+                    </div>
+                    <h3>Ménage</h3>
                     <p>Entretien de la maison, nettoyage régulier ou ponctuel pour votre confort.</p>
-                    <a href="services-menage.html" class="btn">Découvrir les prestations</a>
-                </div>
+                    <span class="tile-link">Découvrir les prestations →</span>
+                </a>
 
-                <!-- Bloc Web & SEO -->
-                
+                <a href="espaces-verts.html" class="service-tile t-green">
+                    <div class="tile-icon" style="background:#DFF3E4;">
+                        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#3CA35A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 4 13H2a10 10 0 0 0 10 10z"/><path d="M11 20a7 7 0 0 0 7-7h2a10 10 0 0 1-10 10z"/><path d="M11 20V4a4 4 0 0 1 4-4"/><path d="M11 13a4 4 0 0 0-4-4"/></svg>
+                    </div>
+                    <h3>Espaces Verts</h3>
+                    <p>Tonte, taille, entretien de jardins et aménagements extérieurs pour les particuliers.</p>
+                    <span class="tile-link">Découvrir les prestations →</span>
+                </a>
+
+                <a href="accompagnement.html" class="service-tile t-orange">
+                    <div class="tile-icon" style="background:#FBE4D6;">
+                        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#E0703A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    </div>
+                    <h3>Accompagnement</h3>
+                    <p>Courses, rendez-vous, sorties et aide administrative pour vos proches, en toute confiance.</p>
+                    <span class="tile-link">Découvrir les prestations →</span>
+                </a>
 
             </div>
         </section>
 
         <!-- Bloc SEO / Présentation locale -->
-        <section style="background-color: #ffffff; padding: 50px 0; border-top: 1px solid #eaeaea;">
+        <section class="seo-block">
             <div class="container" style="max-width: 800px;">
-                <h2 style="text-align: center; margin-bottom: 20px;">Arc-en-Ciel Services, votre artisan de confiance à Domagné</h2>
-                <p style="font-size: 15px; color: #555; line-height: 1.7; margin-bottom: 18px;">
-                    Basée à Domagné, Arc-en-Ciel Services accompagne particuliers et professionnels des environs sur trois savoir-faire : l'<a href="services-menage.html" style="color:#0275d8;font-weight:600;">entretien de la maison</a>, l'<a href="espaces-verts.html" style="color:#5cb85c;font-weight:600;">entretien des espaces verts</a> pour les particuliers.
+                <h2>Arc-en-Ciel Services, votre artisan de confiance à Domagné</h2>
+                <p>
+                    Basée à Domagné, Arc-en-Ciel Services accompagne les particuliers des environs sur trois savoir-faire : l'<a href="services-menage.html" style="color:var(--blue);font-weight:600;">entretien de la maison</a>, l'<a href="espaces-verts.html" style="color:var(--green-dark);font-weight:600;">entretien des espaces verts</a> et l'<a href="accompagnement.html" style="color:var(--orange-dark);font-weight:600;">accompagnement au quotidien</a>.
                 </p>
-                <p style="font-size: 15px; color: #555; line-height: 1.7; margin-bottom: 18px;">
+                <p>
                     Que vous cherchiez un service de ménage régulier ou un jardinier pour l'entretien de votre extérieur, Arc-en-Ciel Services intervient directement à Domagné et dans les communes voisines.
                 </p>
-                <p style="font-size: 15px; color: #555; line-height: 1.7; margin-bottom: 25px;">
+                <p>
                     Notre approche reste la même quel que soit le service : un interlocuteur unique, un travail soigné, et des solutions pensées pour les besoins réels de chaque foyer. Pas de sous-traitance, pas de discours commercial — juste un artisan qui connaît son territoire.
                 </p>
-                <p style="text-align: center; font-size: 14px; color: #666; font-weight: 600;">
-                    📍 Domagné et alentours &nbsp;·&nbsp; ✉️ <a href="contact.html" style="color:#2c3e50;text-decoration:underline;">Contactez-nous</a> pour un devis gratuit et sans engagement.
+                <p class="seo-cta">
+                    📍 Domagné et alentours &nbsp;·&nbsp; ✉️ <a href="contact.html" style="color:var(--text);text-decoration:underline;">Contactez-nous</a> pour un devis gratuit et sans engagement.
                 </p>
             </div>
         </section>
     </main>
 
-    <footer style="text-align: center; padding: 40px 20px; margin-top: 60px; border-top: 1px solid #eaeaea; width: 100%; box-sizing: border-box; background-color: #ffffff;">
+    <footer>
         <div style="margin-bottom: 1.5rem; line-height: 1.8;">
-            <a href="services-menage.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Ménage</a> | 
-            <a href="espaces-verts.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Jardin</a> | 
-
-            <a href="contact.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Contact</a> | 
-            <a href="blog.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Blog & Actu</a> | 
-            <a href="liens-utiles.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Sites Utiles</a> |
-            <a href="mentions-legales.html" style="color: #666; text-decoration: none; margin: 0 15px; font-size: 0.9rem;">Mentions Légales</a> |
-            <a href="sitemap.html" style="color: #666; text-decoration: none; margin: 0 15px; font-size: 0.9rem;">Plan du Site</a>
+            <a href="services-menage.html">Ménage</a> | 
+            <a href="espaces-verts.html">Jardin</a> | 
+            <a href="accompagnement.html">Accompagnement</a> | 
+            <a href="contact.html">Contact</a> | 
+            <a href="blog.html">Blog & Actu</a> | 
+            <a href="liens-utiles.html">Sites Utiles</a> |
+            <a href="mentions-legales.html">Mentions Légales</a> |
+            <a href="sitemap.html">Plan du Site</a>
         </div>
-        <p style="color: #999; font-size: 0.9rem; margin: 0;">&copy; 2026 Arc-en-Ciel Services - Tous droits réservés.</p>
-		<p style="color: #999; font-size: 0.9rem; margin: 0;">site réalisé par <a href="https://www.clarte-web.fr" target="_blank" rel="noopener">Clarté Web</a></p>
+        <p>&copy; 2026 Arc-en-Ciel Services - Tous droits réservés.</p>
+		<p>site réalisé par <a href="https://www.clarte-web.fr" target="_blank" rel="noopener">Clarté Web</a></p>
     </footer>
 
 <div id="cookie-banner" style="position: fixed; bottom: 20px; left: 20px; right: 20px; background: #1a202c; color: white; padding: 15px 20px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); z-index: 10000; font-family: Arial, sans-serif; font-size: 0.9rem; display: none;">

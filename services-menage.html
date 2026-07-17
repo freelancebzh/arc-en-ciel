@@ -14,7 +14,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ménage à Domicile à Domagné | Crédit d'Impôt 50% | Arc-en-Ciel</title>
     <meta name="description" content="Service de ménage à domicile à Domagné et environs : nettoyage régulier ou ponctuel, vitres, sanitaires. Avance immédiate de crédit d'impôt de 50%. Devis gratuit.">
-    <link rel="canonical" href="https://www.arc-en-ciel-services.fr/services-a-la-personne/services-menage.html">
+    <link rel="canonical" href="https://www.arc-en-ciel-services.fr/services-menage.html">
     <link rel="stylesheet" href="style.css">
     <style>
         .flex-container {
@@ -28,26 +28,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         .flex-col {
             flex: 1 1 300px;
         }
-        .page-img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            display: block;
-            margin: 0 auto;
-        }
         .wecasa-box {
             margin-top: 30px;
-            padding: 20px;
-            background-color: #f3e5f5;
-            border-left: 5px solid #9c27b0;
+            padding: 22px;
+            background-color: var(--bg);
+            border-left: 5px solid var(--violet);
+            border-radius: var(--radius);
         }
-        .wecasa-box h3 { color: #4a148c; margin-bottom: 10px; }
-        .tax-box {
-            margin-top: 20px;
-            padding: 20px;
-            background-color: #e2f0d9;
-            border-left: 5px solid #0275d8;
-        }
+        .wecasa-box h3 { color: #6c3483; margin-bottom: 10px; }
     </style>
 </head>
 <body>
@@ -59,13 +47,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <header>
         <div class="container">
-            <h1>Arc-en-Ciel Services à la Personne à Domagné</h1>
+            <div class="brand">
+                <svg class="arc-mark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                    <path d="M8 82 A 42 42 0 0 1 92 82" fill="none" stroke="#2E86DE" stroke-width="9" stroke-linecap="round"/>
+                    <path d="M19 82 A 31 31 0 0 1 81 82" fill="none" stroke="#3CA35A" stroke-width="9" stroke-linecap="round"/>
+                    <path d="M30 82 A 20 20 0 0 1 70 82" fill="none" stroke="#F2B705" stroke-width="9" stroke-linecap="round"/>
+                    <path d="M41 82 A 9 9 0 0 1 59 82" fill="none" stroke="#E0703A" stroke-width="9" stroke-linecap="round"/>
+                </svg>
+                <h1>Arc-en-Ciel Services à la Personne à Domagné</h1>
+            </div>
 <nav>
     <ul>
         <li><a href="index.html">Accueil</a></li>
         <li><a href="espaces-verts.html">Espaces Verts</a></li>
         <li><a href="services-menage.html">Ménage</a></li>
-        
+                    <li><a href="accompagnement.html">Accompagnement</a></li>
         <li><a href="contact.html">Contact</a></li>
     </ul>
 </nav>
@@ -73,23 +69,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </header>
 
     <main class="container" style="padding: 40px 0;">
-        <h2>Services de Ménage à Domicile sur Domagné</h2>
-        
-        <!-- Section Introduction avec Image d'accroche -->
-        <div class="flex-container">
-            <div class="flex-col" style="padding-right: 20px;">
-                <p style="font-size: 18px; line-height: 1.6;">Des solutions professionnelles pour l'entretien régulier ou ponctuel de votre intérieur. Libérez-vous des corvées quotidiennes et retrouvez du temps pour vous.</p>
-            </div>
-            <div class="flex-col">
-                <img src="photos/menage/femme-fatiguee-a-la-maison.png" alt="Femme fatiguée à la maison" class="page-img">
-            </div>
-        </div>
 
-        <!-- Section Prestations avec Image Produits -->
-        <h3 style="margin-top: 40px; margin-bottom: 20px;">Nos prestations</h3>
+        <section class="service-hero accent-blue">
+            <div class="service-hero-inner">
+                <div>
+                    <span class="eyebrow" style="color: var(--blue-dark);">Domagné & environs</span>
+                    <h2>Ménage à Domicile</h2>
+                    <p>Libérez-vous des corvées quotidiennes et retrouvez du temps pour vous.</p>
+                </div>
+                <div class="service-hero-icon">
+                    <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#2E86DE" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M9 21V9a3 3 0 0 1 3-3v0a3 3 0 0 1 3 3v12"/><path d="M9 9 5 5"/><path d="m19 5-4 4"/></svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Prestations -->
+        <h3 style="margin-top: 10px; margin-bottom: 20px;">Nos prestations</h3>
         <div class="flex-container">
             <div class="flex-col">
-                <img src="photos/menage/produits-menages.jpg" alt="Produits de ménage professionnels" class="page-img" style="max-height: 250px;">
+                <div class="art-panel tone-blue">
+                    <svg width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="#2E86DE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8"/><path d="M12 17v4"/><path d="M20 3H4a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1z"/><path d="m7 8 3 3 6-6"/></svg>
+                </div>
             </div>
             <div class="flex-col" style="padding-left: 20px;">
                 <ul>
@@ -102,7 +102,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
 
         <!-- Bloc Crédit d'impôt -->
-        <div class="tax-box">
+        <div class="tax-credit-box accent-blue">
             <h3>Crédit d'Impôt Immédiat ⚡ 💶</h3>
             <p>Nos services de ménage ouvrent droit à un <strong>crédit d'impôt de 50%</strong>. Grâce à l'Avance immédiate de l'URSSAF, vous ne payez que la moitié de la facture directement.</p>
         </div>
@@ -121,60 +121,54 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				
             </ul>
             <p style="font-size: 13px; color: #666; font-style: italic; margin-bottom: 15px;">(Note : le réseau de partenaires Wecasa ne concerne pas les prestations de jardinage).</p>
-            <a href="https://www.wecasa.fr/pro?utm_source=sponsorship&sponsor_id=DLHS8Swc13Z7" target="_blank" rel="noopener nofollow sponsored" class="btn" style="background-color: #9c27b0; color: #ffffff; text-decoration: none; padding: 10px 20px; border-radius: 4px; display: inline-block;">
+            <a href="https://www.wecasa.fr/pro?utm_source=sponsorship&sponsor_id=DLHS8Swc13Z7" target="_blank" rel="noopener nofollow sponsored" class="btn" style="background-color: var(--violet);">
     Devenir prestataire Wecasa (Lien de parrainage)
 </a>
         </div>
     </main>
-	
-	<div style="margin-top: 5rem; padding: 4rem 2rem; background-color: #1a202c; color: #ffffff; border-radius: 12px; text-align: center; font-family: 'Inter', sans-serif;">
-    <h3 style="font-size: 1.6rem; font-weight: 600; margin-bottom: 0.5rem;">Une question ou besoin d'une autre prestation ?</h3>
-    <p style="font-family: Arial, sans-serif; font-size: 1rem; color: #a0aec0; max-width: 500px; margin: 0 auto 2.5rem auto; line-height: 1.5;">
-        Nous simplifions votre quotidien. Découvrez aussi nos services pour vos extérieurs ou contactez-nous directement.
-    </p>
-    
-    <div style="display: flex; gap: 1.2rem; justify-content: center; flex-wrap: wrap;">
-        <!-- Action vers le Jardin -->
-        <a href="espaces-verts.html" style="display: inline-block; background-color: #ffffff; color: #1a202c; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95rem; border: 2px solid #ffffff; transition: 0.2s;">
-            <span style="margin-right: 6px; display: inline-block;">🌳</span>Besoin d'un Jardinier ?
-        </a>
-        
-        <!-- Action vers le Contact -->
-        <a href="contact.html" style="display: inline-block; background-color: transparent; color: #ffffff; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95rem; border: 2px solid #ffffff; transition: 0.2s;" onmouseover="this.style.backgroundColor='#ffffff'; this.style.color='#1a202c';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#ffffff';">
-            <span style="margin-right: 6px; display: inline-block;">✉️</span>Demander un Devis Ménage
-        </a>
+
+    <div class="container">
+    <div class="cta-block">
+    <h3>Une question ou besoin d'une autre prestation ?</h3>
+    <p>Nous simplifions votre quotidien. Découvrez aussi nos services pour vos extérieurs ou contactez-nous directement.</p>
+
+    <div class="cta-actions">
+        <a href="espaces-verts.html" class="cta-btn filled-green">🌳 Besoin d'un Jardinier ?</a>
+        <a href="accompagnement.html" class="cta-btn outline">🤝 Besoin d'un Accompagnement ?</a>
+        <a href="contact.html" class="cta-btn filled-blue">✉️ Demander un Devis Ménage</a>
     </div>
-</div>
+    </div>
+    </div>
 
     <!-- Bloc SEO / Présentation locale -->
-    <section style="background-color: #ffffff; padding: 50px 0; border-top: 1px solid #eaeaea;">
+    <section class="seo-block">
         <div class="container" style="max-width: 800px;">
-            <h2 style="text-align: center; color: #0275d8; margin-bottom: 20px;">Ménage à domicile à Domagné : du temps libéré pour vous</h2>
-            <p style="font-size: 15px; color: #555; line-height: 1.7; margin-bottom: 18px;">
+            <h2 style="color: var(--blue-dark);">Ménage à domicile à Domagné : du temps libéré pour vous</h2>
+            <p>
                 Entre le travail et la vie de famille, l'entretien de la maison passe souvent en dernier. À Domagné et dans les environs, Arc-en-Ciel Services propose un <strong>service de ménage à domicile</strong> régulier ou ponctuel : nettoyage des pièces de vie, entretien de la cuisine et des sanitaires, lavage des vitres, ou grand nettoyage de printemps.
             </p>
-            <p style="font-size: 15px; color: #555; line-height: 1.7; margin-bottom: 18px;">
+            <p>
                 Chaque prestation est pensée pour s'adapter à votre rythme, sans contrainte ni engagement excessif. Et grâce à l'avance immédiate de crédit d'impôt de l'URSSAF, vous ne payez directement que la moitié du montant de votre facture — l'entretien professionnel de votre intérieur devient accessible au quotidien.
             </p>
-            <p style="text-align: center; font-size: 14px; color: #666; font-weight: 600;">
-                📍 Domagné et alentours &nbsp;·&nbsp; ✉️ <a href="contact.html" style="color:#0275d8;text-decoration:underline;">Demandez votre devis ménage gratuit</a>
+            <p class="seo-cta">
+                📍 Domagné et alentours &nbsp;·&nbsp; ✉️ <a href="contact.html" style="color:var(--blue-dark);text-decoration:underline;">Demandez votre devis ménage gratuit</a>
             </p>
         </div>
     </section>
 
-    <footer style="text-align: center; padding: 40px 20px; margin-top: 60px; border-top: 1px solid #eaeaea; width: 100%; box-sizing: border-box; background-color: #ffffff;">
+    <footer>
         <div style="margin-bottom: 1.5rem; line-height: 1.8;">
-            <a href="services-menage.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Ménage</a> | 
-            <a href="espaces-verts.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Jardin</a> | 
-       
-            <a href="contact.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Contact</a> | 
-            <a href="blog.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Blog & Actu</a> | 
-            <a href="liens-utiles.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Sites Utiles</a> |
-            <a href="mentions-legales.html" style="color: #666; text-decoration: none; margin: 0 15px; font-size: 0.9rem;">Mentions Légales</a> |
-            <a href="sitemap.html" style="color: #666; text-decoration: none; margin: 0 15px; font-size: 0.9rem;">Plan du Site</a>
+            <a href="services-menage.html">Ménage</a> | 
+            <a href="espaces-verts.html">Jardin</a> | 
+            <a href="accompagnement.html">Accompagnement</a> | 
+            <a href="contact.html">Contact</a> | 
+            <a href="blog.html">Blog & Actu</a> | 
+            <a href="liens-utiles.html">Sites Utiles</a> |
+            <a href="mentions-legales.html">Mentions Légales</a> |
+            <a href="sitemap.html">Plan du Site</a>
         </div>
-        <p style="color: #999; font-size: 0.9rem; margin: 0;">&copy; 2026 Arc-en-Ciel Services - Tous droits réservés.</p>
-		<p style="color: #999; font-size: 0.9rem; margin: 0;">site réalisé par <a href="https://www.clarte-web.fr" target="_blank" rel="noopener">Clarté Web</a></p>
+        <p>&copy; 2026 Arc-en-Ciel Services - Tous droits réservés.</p>
+		<p>site réalisé par <a href="https://www.clarte-web.fr" target="_blank" rel="noopener">Clarté Web</a></p>
     </footer>
 	
 	

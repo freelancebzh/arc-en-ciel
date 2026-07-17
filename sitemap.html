@@ -13,21 +13,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plan du Site | Arc-en-Ciel Services à la personne Domagné</title>
-    <meta name="description" content="Retrouvez toutes les pages du site Arc-en-Ciel Services à la personne : ménage, jardinage, contact et mentions légales.">
+    <meta name="description" content="Retrouvez toutes les pages du site Arc-en-Ciel Services à la personne : ménage, jardinage, accompagnement, contact et mentions légales.">
     <link rel="canonical" href="https://www.arc-en-ciel-services.fr/sitemap.html">
     <link rel="stylesheet" href="style.css">
     <style>
-        .sitemap-hero {
-            background: linear-gradient(135deg, #2c3e50 0%, #1a252f 100%);
-            color: #ffffff;
-            padding: 50px 20px;
-            text-align: center;
-            border-radius: 8px;
-            margin-bottom: 40px;
-        }
-        .sitemap-hero h2 { color: #ffffff; margin-bottom: 10px; }
-        .sitemap-hero p { color: #bdc3c7; font-size: 16px; }
-
         .sitemap-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -35,14 +24,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             margin-bottom: 40px;
         }
         .sitemap-block {
-            background: #ffffff;
+            background: var(--surface);
             padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            border-top: 4px solid #2c3e50;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-sm);
+            border-top: 4px solid var(--text);
         }
         .sitemap-block h3 {
-            color: #2c3e50;
+            color: var(--text);
             margin-bottom: 15px;
             font-size: 18px;
         }
@@ -55,17 +44,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             margin-bottom: 10px;
         }
         .sitemap-block ul li a {
-            color: #0275d8;
+            color: var(--blue);
             text-decoration: none;
             font-weight: 600;
         }
         .sitemap-block ul li a:hover {
             text-decoration: underline;
         }
-        .sitemap-block.green { border-top-color: #5cb85c; }
-        .sitemap-block.blue { border-top-color: #0275d8; }
-        .sitemap-block.tech { border-top-color: #292b2c; }
-        .sitemap-block.legal { border-top-color: #7f8c8d; }
+        .sitemap-block.green { border-top-color: var(--green); }
+        .sitemap-block.blue { border-top-color: var(--blue); }
+        .sitemap-block.legal { border-top-color: var(--text-muted); }
     </style>
 </head>
 <body>
@@ -76,13 +64,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <header>
         <div class="container">
-            <h1>Arc-en-Ciel Services à la Personne et Web & SEO à Domagné</h1>
+            <div class="brand">
+                <svg class="arc-mark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                    <path d="M8 82 A 42 42 0 0 1 92 82" fill="none" stroke="#2E86DE" stroke-width="9" stroke-linecap="round"/>
+                    <path d="M19 82 A 31 31 0 0 1 81 82" fill="none" stroke="#3CA35A" stroke-width="9" stroke-linecap="round"/>
+                    <path d="M30 82 A 20 20 0 0 1 70 82" fill="none" stroke="#F2B705" stroke-width="9" stroke-linecap="round"/>
+                    <path d="M41 82 A 9 9 0 0 1 59 82" fill="none" stroke="#E0703A" stroke-width="9" stroke-linecap="round"/>
+                </svg>
+                <h1>Arc-en-Ciel Services à la Personne à Domagné</h1>
+            </div>
             <nav>
                 <ul>
                     <li><a href="index.html">Accueil</a></li>
                     <li><a href="espaces-verts.html">Espaces Verts</a></li>
                     <li><a href="services-menage.html">Ménage</a></li>
-               
+                    <li><a href="accompagnement.html">Accompagnement</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
@@ -91,10 +87,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <main class="container" style="padding: 40px 0;">
 
-        <div class="sitemap-hero">
-            <h2>Plan du Site</h2>
-            <p>Retrouvez ici l'ensemble des pages du site Arc-en-Ciel Services.</p>
-        </div>
+        <section class="service-hero accent-mixed">
+            <div class="service-hero-inner">
+                <div>
+                    <h2>Plan du Site</h2>
+                    <p>Retrouvez ici l'ensemble des pages du site Arc-en-Ciel Services.</p>
+                </div>
+                <div class="service-hero-icon">
+                    <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#B15DC7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                </div>
+            </div>
+        </section>
 
         <div class="sitemap-grid">
 
@@ -121,6 +124,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </ul>
             </div>
 
+            <div class="sitemap-block" style="border-top-color: var(--orange);">
+                <h3>🤝 Accompagnement</h3>
+                <ul>
+                    <li><a href="accompagnement.html">Accompagnement & Aide à Domicile</a></li>
+                </ul>
+            </div>
+
          
 
             <div class="sitemap-block legal">
@@ -134,19 +144,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     </main>
 
-    <footer style="text-align: center; padding: 40px 20px; margin-top: 60px; border-top: 1px solid #eaeaea; width: 100%; box-sizing: border-box; background-color: #ffffff;">
+    <footer>
         <div style="margin-bottom: 1.5rem; line-height: 1.8;">
-            <a href="services-menage.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Ménage</a> | 
-            <a href="espaces-verts.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Jardin</a> | 
-       
-            <a href="contact.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Contact</a> | 
-            <a href="blog.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Blog & Actu</a> | 
-            <a href="liens-utiles.html" style="color: #666; text-decoration: none; margin: 0 15px; font-weight: bold;">Sites Utiles</a> |
-            <a href="mentions-legales.html" style="color: #666; text-decoration: none; margin: 0 15px; font-size: 0.9rem;">Mentions Légales</a> |
-            <a href="sitemap.html" style="color: #666; text-decoration: none; margin: 0 15px; font-size: 0.9rem;">Plan du Site</a>
+            <a href="services-menage.html">Ménage</a> | 
+            <a href="espaces-verts.html">Jardin</a> | 
+            <a href="accompagnement.html">Accompagnement</a> | 
+            <a href="contact.html">Contact</a> | 
+            <a href="blog.html">Blog & Actu</a> | 
+            <a href="liens-utiles.html">Sites Utiles</a> |
+            <a href="mentions-legales.html">Mentions Légales</a> |
+            <a href="sitemap.html">Plan du Site</a>
         </div>
-        <p style="color: #999; font-size: 0.9rem; margin: 0;">&copy; 2026 Arc-en-Ciel Services - Tous droits réservés.</p>
-		<p style="color: #999; font-size: 0.9rem; margin: 0;">site réalisé par <a href="https://www.clarte-web.fr" target="_blank" rel="noopener">Clarté Web</a></p>
+        <p>&copy; 2026 Arc-en-Ciel Services - Tous droits réservés.</p>
+		<p>site réalisé par <a href="https://www.clarte-web.fr" target="_blank" rel="noopener">Clarté Web</a></p>
     </footer>
 
 <div id="cookie-banner" style="position: fixed; bottom: 20px; left: 20px; right: 20px; background: #1a202c; color: white; padding: 15px 20px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); z-index: 10000; font-family: Arial, sans-serif; font-size: 0.9rem; display: none;">
