@@ -1,0 +1,57 @@
+---
+// Habillage commun a toutes les pages : <head>, en-tete, menu, pied de page, cookies.
+import '../styles/style.css';
+import { URL_SITE, TITRE_COURT, MENU, PIED } from '../data/site.js';
+
+const { title, description, chemin = '', titreH1 = TITRE_COURT, noindex = false } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title}</title>
+    <meta name="description" content={description}>
+    {noindex && <meta name="robots" content="noindex">}
+    <link rel="canonical" href={`${URL_SITE}/${chemin}`}>
+    <slot name="head" />
+</head>
+<body>
+    <slot name="avant-header" />
+
+    <header>
+        <div class="container">
+            <div class="brand">
+                <svg class="arc-mark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                    <path d="M8 82 A 42 42 0 0 1 92 82" fill="none" stroke="#2E86DE" stroke-width="9" stroke-linecap="round"/>
+                    <path d="M19 82 A 31 31 0 0 1 81 82" fill="none" stroke="#3CA35A" stroke-width="9" stroke-linecap="round"/>
+                    <path d="M30 82 A 20 20 0 0 1 70 82" fill="none" stroke="#F2B705" stroke-width="9" stroke-linecap="round"/>
+                    <path d="M41 82 A 9 9 0 0 1 59 82" fill="none" stroke="#E0703A" stroke-width="9" stroke-linecap="round"/>
+                </svg>
+                <h1>{titreH1}</h1>
+            </div>
+            <nav>
+                <ul>
+                    {MENU.map((lien) => <li><a href={lien.href}>{lien.texte}</a></li>)}
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <slot />
+
+    <footer>
+        <div class="footer-liens">
+            {PIED.map((lien, i) => (
+                <>
+                    <a href={lien.href}>{lien.texte}</a>{i < PIED.length - 1 && ' | '}
+                </>
+            ))}
+        </div>
+        <p>&copy; 2026 Arc-en-Ciel Services - Tous droits réservés.</p>
+        <p>site réalisé par <a href="https://www.clarte-web.fr" target="_blank" rel="noopener">Clarté Web</a></p>
+    </footer>
+
+    <script is:inline src="cookies.js" defer></script>
+</body>
+</html>

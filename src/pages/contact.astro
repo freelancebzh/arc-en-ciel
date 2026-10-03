@@ -1,0 +1,76 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="Contact & Devis Gratuit | Arc-en-Ciel Services Domagné" description="Demandez votre devis gratuit pour un service de ménage, de jardinage ou d'accompagnement. Réponse rapide, sans engagement." chemin="contact.html">
+  <script slot="head" is:inline src="https://js.hcaptcha.com/1/api.js" async defer></script>
+
+
+    <main class="container">
+        
+        <div class="contact-container">
+            <h2>Demande de devis ou renseignement</h2>
+            
+            <!-- Formulaire lié à Web3Forms -->
+            <form action="https://api.web3forms.com/submit" method="POST">
+                
+                <!-- Clé d'accès à générer (voir instructions ci-dessous) -->
+                <input type="hidden" name="access_key" value="5f69cbfc-d7bc-4039-9607-198dfc494e57">
+                
+                <!-- Redirection après envoi réussi -->
+                <input type="hidden" name="redirect" value="https://www.arc-en-ciel-services.fr/merci.html">
+
+                <!-- Protection anti-spam invisible (Honeypot) -->
+                <input type="checkbox" name="botcheck" class="cache">
+
+                <div class="form-group">
+                    <label for="name">Nom / Prénom</label>
+                    <input type="text" id="name" name="name" required placeholder="Votre nom complet">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Adresse E-mail</label>
+                    <input type="email" id="email" name="email" required placeholder="@">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Téléphone</label>
+                    <input type="tel" id="phone" name="phone" placeholder="06 ...">
+                </div>
+
+                <div class="form-group">
+                    <label for="service">Service concerné</label>
+                    <select id="service" name="service" required>
+                        <option value="" disabled selected>Choisissez un service</option>
+                        <option value="menage">Ménage & Entretien intérieur</option>
+                        <option value="jardin">Espaces Verts & Jardinage</option>
+                        <option value="accompagnement">Accompagnement & Aide à Domicile</option>
+                        <option value="autre">Autre demande</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Votre message / Détails du projet</label>
+                    <textarea id="message" name="message" required placeholder="Décrivez votre besoin précisément..."></textarea>
+                </div>
+
+                <!-- Bloc Captcha Visuel -->
+                <div class="h-captcha" data-sitekey="4688e37a-ae02-4ef2-bf12-3b844ccca314"></div>
+
+                <button type="submit" class="btn-submit">Envoyer ma demande</button>
+
+            </form>
+        </div>
+
+    </main>
+
+    <!-- Bloc SEO / Présentation locale -->
+    <section class="seo-block contact-seo">
+        <div class="container tres-etroit">
+            <p>
+                Arc-en-Ciel Services intervient à <strong>Domagné</strong> et dans les communes voisines pour vos besoins en <a href="services-menage.html" class="lien-bleu lien-semi">ménage</a>, <a href="espaces-verts.html" class="lien-vert lien-semi">jardinage</a> ou <a href="accompagnement.html" class="lien-orange lien-semi">accompagnement</a>. Remplissez le formulaire ci-dessus, nous revenons vers vous rapidement pour établir un devis gratuit et sans engagement.
+            </p>
+        </div>
+    </section>
+
+    
+</Layout>
