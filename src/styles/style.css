@@ -262,6 +262,25 @@ a:focus-visible, button:focus-visible, .btn:focus-visible, .cta-btn:focus-visibl
 .tax-credit-box.accent-blue { border-left-color: var(--blue); }
 .tax-credit-box.accent-blue h3 { color: var(--blue-dark); }
 
+/* Document client : avance immédiate */
+.avance-page { max-width: 900px; }
+.avance-document { display: grid; gap: 18px; }
+.avance-identite, .avance-card {
+    background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 24px 28px; box-shadow: var(--shadow-sm);
+}
+.avance-identite { border-left: 5px solid var(--blue); }
+.avance-identite p { font-weight: 700; }
+.avance-card h2 { font-size: 1.2rem; color: var(--blue-dark); margin-bottom: 12px; }
+.avance-card p, .avance-card li { color: var(--text-muted); }
+.avance-card ul { padding-left: 22px; }
+.avance-card li + li { margin-top: 8px; }
+.avance-reference a { overflow-wrap: anywhere; }
+@media (max-width: 600px) {
+    .avance-identite, .avance-card { padding: 20px; }
+    .avance-card h2 { font-size: 1.08rem; }
+}
+
 .reassurance-box {
     background-color: var(--surface);
     border: 1px solid var(--border);

@@ -9,6 +9,7 @@ export const MENU = [
   { href: 'index.html', texte: 'Accueil' },
   { href: 'espaces-verts.html', texte: 'Espaces Verts' },
   { href: 'services-menage.html', texte: 'Ménage' },
+  { href: 'avance-immediate.html', texte: 'Avance immédiate' },
   { href: 'accompagnement.html', texte: 'Accompagnement' },
   { href: 'contact.html', texte: 'Contact' },
 ];
@@ -16,6 +17,7 @@ export const MENU = [
 // Liens du pied de page
 export const PIED = [
   { href: 'services-menage.html', texte: 'Ménage' },
+  { href: 'avance-immediate.html', texte: 'Avance immédiate' },
   { href: 'espaces-verts.html', texte: 'Jardin' },
   { href: 'accompagnement.html', texte: 'Accompagnement' },
   { href: 'contact.html', texte: 'Contact' },
