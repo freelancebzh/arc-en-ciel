@@ -246,8 +246,12 @@ a:focus-visible, button:focus-visible, .btn:focus-visible, .cta-btn:focus-visibl
     padding: 24px 28px; box-shadow: var(--shadow-sm);
 }
 .avance-identite { border-left: 5px solid var(--blue); }
-.avance-identite p { font-weight: 700; }
-.avance-card h2 { font-size: 1.2rem; color: var(--blue-dark); margin-bottom: 12px; }
+.avance-identite p { color: var(--text-muted); }
+.avance-identite .avance-nom { font-weight: 700; font-size: 1.15rem; color: var(--text); }
+.avance-card h2 { font-size: 1.2rem; color: var(--text); margin-bottom: 14px; display: flex; align-items: center; gap: 14px; }
+.avance-num { flex-shrink: 0; width: 36px; height: 36px; border-radius: 50%; background: #E9F2FC; color: var(--blue-dark); display: inline-flex; align-items: center; justify-content: center; font-size: 1rem; }
+.avance-card:nth-of-type(even) .avance-num { background: #E9F6EC; color: var(--green-dark); }
+.avance-card li::marker { color: var(--blue); }
 .avance-card p, .avance-card li { color: var(--text-muted); }
 .avance-card ul { padding-left: 22px; }
 .avance-card li + li { margin-top: 8px; }
