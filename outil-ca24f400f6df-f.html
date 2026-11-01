@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <title>Éditeur de facture — Arc-en-Ciel Services</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Karla:wght@400;500;600;700&display=swap');
+    :root{--fond:#fbf8f3;--papier:#fff;--texte:#362f2b;--doux:#746b63;--ligne:#ece4d8;--bleu:#2e86de;--vert:#3ca35a;--orange:#e0703a;--jaune:#f2b705;--violet:#b15dc7}
+    *{box-sizing:border-box}body{margin:0;background:var(--fond);color:var(--texte);font:15px/1.5 'Karla',Arial,sans-serif;padding:38px 18px}.facture{max-width:850px;margin:0 auto;background:var(--papier);border:1px solid var(--ligne);border-radius:20px;overflow:hidden;box-shadow:0 12px 38px #362f2b12}.arc{height:7px;background:linear-gradient(90deg,var(--bleu),var(--vert),var(--jaune),var(--orange),var(--violet))}.contenu{padding:48px 54px 42px}.entete{display:flex;justify-content:space-between;gap:28px;align-items:flex-start}.marque{display:flex;gap:14px;align-items:center}.logo{width:54px;height:54px;flex:none}.marque h1{font:800 23px/1.1 'Baloo 2',sans-serif;margin:0 0 5px}.marque h1 .sous-titre{font:600 14px/1.2 'Karla',sans-serif;white-space:nowrap;letter-spacing:0}.marque p,.coordonnees{color:var(--doux);margin:0}.coordonnees{font-size:13px}.titre{text-align:right}.titre h2{font:800 40px/.95 'Baloo 2',sans-serif;letter-spacing:1px;margin:0 0 8px;color:var(--bleu)}.titre strong{font-size:15px}.meta{margin-top:28px;padding:14px 18px;background:#fbf8f3;border-radius:12px;display:flex;gap:35px;flex-wrap:wrap}.meta span{color:var(--doux);font-size:13px}.meta strong{display:block;color:var(--texte);font-size:15px}.parties{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:30px 0}.partie-label,.surTitre{font-size:11px;text-transform:uppercase;letter-spacing:1.25px;font-weight:700;color:var(--doux);margin:0 0 8px}.partie{padding:18px 20px;border:1px solid var(--ligne);border-radius:12px}.partie.client{border-top:3px solid var(--orange)}.partie em{font-style:normal;color:var(--doux)}.jours{font-size:12px;font-weight:400;color:var(--doux);margin-top:4px}table{width:100%;border-collapse:collapse;margin:12px 0 20px}th{text-align:left;color:var(--doux);font-size:12px;text-transform:uppercase;letter-spacing:.7px;padding:11px 10px;border-bottom:1px solid var(--ligne)}td{padding:15px 10px;border-bottom:1px solid var(--ligne)}th:nth-child(n+2),td:nth-child(n+2){text-align:right;white-space:nowrap}.ligne-service{font-weight:700}.totaux{width:min(100%,350px);margin:0 0 0 auto}.total-ligne{display:flex;justify-content:space-between;padding:6px 0;color:var(--doux)}.total-ligne.final{margin-top:7px;padding:14px 16px;background:#e9f2fc;border-radius:10px;color:var(--texte);font-weight:700;font-size:18px}.total-ligne.final strong{color:var(--bleu-dark,#226bb3)}.note-tva{margin:17px 0 0;text-align:right;color:var(--doux);font-size:13px}.avance{margin-top:28px;padding:22px 24px;background:#e9f6ec;border-radius:14px;border-left:4px solid var(--vert)}.avance h3{font:700 19px 'Baloo 2',sans-serif;margin:0 0 7px}.avance p{margin:0 0 12px;color:#4e6251;font-size:13px}.avance-lignes{display:grid;grid-template-columns:1fr auto;gap:5px 18px;font-size:14px}.avance-lignes strong{text-align:right}.avance-lignes .reste{border-top:1px solid #cce4d1;padding-top:8px;margin-top:3px;font-size:16px}.reglement{margin-top:22px;padding:16px 19px;background:#fbf8f3;border-radius:12px}.reglement h3{font:700 16px 'Baloo 2',sans-serif;margin:0 0 5px}.reglement p{color:var(--doux);font-size:13px;margin:0}.merci{text-align:center;margin:32px 0 0;font:700 20px 'Baloo 2',sans-serif}.pied{text-align:center;border-top:1px solid var(--ligne);margin-top:25px;padding-top:16px;color:var(--doux);font-size:12px}.pied strong{color:var(--texte)}
+    @media(max-width:600px){body{padding:12px 8px}.contenu{padding:28px 20px}.entete{flex-direction:column}.titre{text-align:left}.titre h2{font-size:34px}.parties{grid-template-columns:1fr;gap:12px}.meta{gap:12px 24px}th,td{padding:11px 5px;font-size:12px}th{font-size:10px}.avance{padding:18px 16px}}
+    @media print{@page{size:A4;margin:8mm}body{padding:0;background:#fff;font-size:12px;line-height:1.45}.facture{max-width:none;border:0;border-radius:0;box-shadow:none;overflow:visible}.arc{-webkit-print-color-adjust:exact;print-color-adjust:exact}.contenu{padding:5mm 8mm 0}.meta,.total-ligne.final,.avance,.reglement,.partie{-webkit-print-color-adjust:exact;print-color-adjust:exact}.avance,table,.parties,.totaux,.reglement{break-inside:avoid}.titre h2{font-size:32px}.entete{gap:20px}.logo{width:48px;height:48px}.marque h1{font-size:20px}.marque h1 .sous-titre{font-size:12px}.coordonnees{font-size:11px}.meta{margin-top:22px;padding:12px 16px}.parties{margin:22px 0;gap:18px}.partie{padding:16px 18px}table{margin:10px 0 14px}th{padding:9px 7px;font-size:10px}td{padding:11px 7px}.jours{font-size:11px}.total-ligne.final{padding:11px 14px;font-size:17px}.avance{margin-top:13px;padding:12px 18px}.avance h3{font-size:18px}.avance p{font-size:11.5px;margin-bottom:10px}.avance-lignes{font-size:12px;gap:5px 16px}.avance-lignes .reste{padding-top:7px}.reglement{margin-top:10px;padding:9px 14px}.reglement h3{font-size:16px}.reglement p,.pied{font-size:11px}.merci{break-before:avoid;break-inside:avoid;margin-top:8px;font-size:17px;line-height:1.15}.pied{break-before:avoid;break-inside:avoid;margin-top:5px;padding-top:4px;font-size:9px;line-height:1.25}}
+    .editeur{max-width:850px;margin:0 auto 26px;background:var(--papier);border:1px solid var(--ligne);border-radius:20px;padding:26px 30px;box-shadow:0 12px 38px #362f2b12}
+    .editeur h1{font:800 24px 'Baloo 2',sans-serif;margin:0 0 4px}.editeur>p{margin:0 0 18px;color:var(--doux);font-size:13px}
+    .champs{display:grid;grid-template-columns:1fr 1fr;gap:14px 18px}.champs .large{grid-column:1/-1}
+    .editeur label{display:block;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--doux);margin-bottom:4px}
+    .editeur input,.editeur textarea{width:100%;font:inherit;color:var(--texte);padding:9px 11px;border:1px solid var(--ligne);border-radius:9px;background:#fff}
+    .editeur input:focus,.editeur textarea:focus{outline:2px solid var(--bleu);outline-offset:-1px}
+    .seances{margin-top:18px}.seance{display:grid;grid-template-columns:1fr 130px 40px;gap:10px;margin-bottom:8px}
+    .btn{font:700 14px 'Karla',sans-serif;border:0;border-radius:9px;padding:10px 16px;cursor:pointer;background:#e9f2fc;color:#226bb3}
+    .btn.suppr{background:#fbe9e2;color:var(--orange);padding:0}.btn.principal{background:var(--bleu);color:#fff;font-size:15px;padding:12px 22px}
+    .actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:18px}.case{display:flex;gap:8px;align-items:center}.case input{width:auto}
+    .aide{font-size:12px;color:var(--doux);margin:10px 0 0}
+    @media(max-width:600px){.champs{grid-template-columns:1fr}.seance{grid-template-columns:1fr 90px 40px}.editeur{padding:20px 16px}}
+    @media print{.editeur{display:none}}
+  </style>
+</head>
+<body>
+  <section class="editeur">
+    <h1>Éditeur de facture</h1>
+    <p>Complétez les champs : la facture ci-dessous se met à jour en direct. Cliquez sur « Imprimer / PDF » puis choisissez « Enregistrer au format PDF ».</p>
+    <div class="champs">
+      <div><label for="numero">N° de facture</label><input id="numero" placeholder="2026-001"></div>
+      <div><label for="emission">Date d’émission</label><input id="emission" type="date"></div>
+      <div class="large"><label for="client">Nom du client</label><input id="client" placeholder="Prénom Nom"></div>
+      <div class="large"><label for="adresse">Adresse du client</label><textarea id="adresse" rows="2" placeholder="55 route de Rennes&#10;35410 Domloup"></textarea></div>
+      <div class="large"><label for="designation">Désignation</label><input id="designation" value="Ménage classique – maison entière"></div>
+      <div><label for="tarif">Tarif horaire (€)</label><input id="tarif" type="number" min="0" step="0.01" value="28"></div>
+      <div class="case"><input id="avance" type="checkbox" checked><label for="avance" style="margin:0;text-transform:none;letter-spacing:0;font-size:14px;color:var(--texte)">Avance immédiate (crédit d’impôt 50 %)</label></div>
+    </div>
+    <div class="seances">
+      <label>Sessions (date et nombre d’heures)</label>
+      <div id="listeSeances"></div>
+      <button class="btn" id="ajout" type="button">+ Ajouter une session</button>
+    </div>
+    <div class="actions"><button class="btn principal" id="imprimer" type="button">Imprimer / PDF</button></div>
+    <p class="aide">Page non référencée : non indexée par les moteurs de recherche et absente du plan du site. Rien n’est enregistré, tout reste dans votre navigateur.</p>
+  </section>
+
+  <main class="facture">
+    <div class="arc"></div>
+    <div class="contenu">
+      <header class="entete">
+        <div>
+          <div class="marque">
+            <svg class="logo" viewBox="0 0 100 100" aria-hidden="true"><path d="M8 82 A42 42 0 0 1 92 82" fill="none" stroke="#2E86DE" stroke-width="9" stroke-linecap="round"/><path d="M19 82 A31 31 0 0 1 81 82" fill="none" stroke="#3CA35A" stroke-width="9" stroke-linecap="round"/><path d="M30 82 A20 20 0 0 1 70 82" fill="none" stroke="#F2B705" stroke-width="9" stroke-linecap="round"/><path d="M41 82 A9 9 0 0 1 59 82" fill="none" stroke="#E0703A" stroke-width="9" stroke-linecap="round"/></svg>
+            <div><h1>Arc-en-Ciel-Services.fr</h1><p>Espaces verts · Ménage · Accompagnement</p></div>
+          </div>
+          <p class="coordonnees" style="margin-top:15px">4 allée de l'École · Bourg de Chaumeré<br>35113 Domagné<br><br>SIREN : 991 629 981<br>SIRET : 991 629 981 00010<br>Agrément SAP : SAP 991629981</p>
+        </div>
+        <div class="titre"><h2>FACTURE</h2><strong>N° <span id="oNumero"></span></strong></div>
+      </header>
+
+      <section class="meta" aria-label="Informations de facturation">
+        <div><span>Date d’émission</span><strong id="oEmission"></strong></div>
+        <div><span>Période de prestation</span><strong id="oPeriode"></strong></div>
+      </section>
+
+      <section class="parties">
+        <div class="partie client"><p class="partie-label">Facturé à</p><strong id="oClient"></strong><br><em id="oAdresse"></em></div>
+        <div class="partie"><p class="partie-label">Prestation</p><strong>Ménage à domicile</strong><br><em>Service réalisé à la période indiquée ci-dessus</em></div>
+      </section>
+
+      <p class="surTitre">Détail de la prestation</p>
+      <table>
+        <thead><tr><th>Désignation</th><th>Quantité</th><th>Tarif horaire</th><th>Montant</th></tr></thead>
+        <tbody><tr><td class="ligne-service"><span id="oDesignation"></span><div class="jours" id="oJours"></div></td><td id="oHeures"></td><td id="oTarif"></td><td id="oMontant"></td></tr></tbody>
+      </table>
+      <section class="totaux" aria-label="Récapitulatif des montants">
+        <div class="total-ligne"><span>Total de la prestation</span><strong class="oTotal"></strong></div>
+        <div class="total-ligne final"><span>Total à payer</span><strong class="oTotal"></strong></div>
+      </section>
+      <p class="note-tva">TVA non applicable — article 293 B du CGI.</p>
+
+      <section class="avance" id="blocAvance">
+        <h3>Avance immédiate du crédit d’impôt</h3>
+        <p>Prestation réalisée dans le cadre des services à la personne. L’Avance immédiate du crédit d’impôt est activée : le montant correspondant est directement déduit du montant à régler, selon les modalités du dispositif.</p>
+        <div class="avance-lignes"><span>Montant de la prestation</span><strong class="oTotal"></strong><span>Avance immédiate du crédit d’impôt</span><strong id="oCredit"></strong><span class="reste"><strong>Montant restant à payer</strong></span><strong class="reste" id="oReste"></strong></div>
+      </section>
+      <section class="reglement" id="blocReglement"><h3>Règlement</h3><p>Règlement effectué dans le cadre du dispositif Avance immédiate du crédit d’impôt – Urssaf.</p></section>
+      <p class="merci">Merci pour votre confiance&nbsp;!</p>
+      <footer class="pied"><strong>Arc-en-Ciel-Services.fr</strong><br>Services à la personne</footer>
+    </div>
+  </main>
+
+  <script>
+    var $ = function (id) { return document.getElementById(id); };
+    var euro = new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR' });
+    var mois = ['janvier','février','mars','avril','mai','juin','juillet','août','septembre','octobre','novembre','décembre'];
+
+    function dateFr(iso) { var p = iso.split('-'); return p[2] + '/' + p[1] + '/' + p[0]; }
+    function num(v) { var n = parseFloat(String(v).replace(',', '.')); return isNaN(n) ? 0 : n; }
+    function heures(h) { return String(h).replace('.', ',') + ' h'; }
+    function texte(el, valeur) { el.textContent = valeur; }
+
+    function ajouterSeance() {
+      var ligne = document.createElement('div');
+      ligne.className = 'seance';
+      ligne.innerHTML = '<input type="date" class="sDate" aria-label="Date de la session"><input type="number" class="sHeures" min="0" step="0.25" placeholder="Heures" aria-label="Nombre d’heures"><button type="button" class="btn suppr" aria-label="Supprimer la session">✕</button>';
+      ligne.querySelector('.suppr').onclick = function () { ligne.remove(); maj(); };
+      $('listeSeances').appendChild(ligne);
+    }
+
+    function maj() {
+      var seances = [].map.call(document.querySelectorAll('.seance'), function (l) {
+        return { date: l.querySelector('.sDate').value, h: num(l.querySelector('.sHeures').value) };
+      }).filter(function (s) { return s.date || s.h; });
+      seances.sort(function (a, b) { return a.date < b.date ? -1 : a.date > b.date ? 1 : 0; });
+
+      var totalH = seances.reduce(function (t, s) { return t + s.h; }, 0);
+      var tarif = num($('tarif').value);
+      var total = Math.round(totalH * tarif * 100) / 100;
+      var credit = $('avance').checked ? Math.round(total * 50) / 100 : 0;
+
+      texte($('oNumero'), $('numero').value || '…');
+      texte($('oEmission'), $('emission').value ? dateFr($('emission').value) : '…');
+      var periodes = [];
+      seances.forEach(function (s) {
+        if (!s.date) return;
+        var p = mois[+s.date.slice(5, 7) - 1] + ' ' + s.date.slice(0, 4);
+        if (periodes.indexOf(p) < 0) periodes.push(p);
+      });
+      texte($('oPeriode'), periodes.join(' / ') || '…');
+      texte($('oClient'), $('client').value || '…');
+      $('oAdresse').innerHTML = '';
+      ($('adresse').value || '…').split('\n').forEach(function (l, i) {
+        if (i) $('oAdresse').appendChild(document.createElement('br'));
+        $('oAdresse').appendChild(document.createTextNode(l));
+      });
+      texte($('oDesignation'), $('designation').value);
+      texte($('oJours'), seances.length ? 'Sessions : ' + seances.map(function (s) { return (s.date ? dateFr(s.date).slice(0, 5) : '…') + ' – ' + heures(s.h); }).join(' · ') : '');
+      texte($('oHeures'), heures(totalH));
+      texte($('oTarif'), euro.format(tarif));
+      texte($('oMontant'), euro.format(total));
+      [].forEach.call(document.querySelectorAll('.oTotal'), function (e) { texte(e, euro.format(total)); });
+      texte($('oCredit'), '− ' + euro.format(credit));
+      texte($('oReste'), euro.format(total - credit));
+      $('blocAvance').style.display = $('blocReglement').style.display = $('avance').checked ? '' : 'none';
+    }
+
+    var d = new Date();
+    $('emission').value = d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+    ajouterSeance();
+    $('ajout').onclick = ajouterSeance;
+    $('imprimer').onclick = function () { window.print(); };
+    document.querySelector('.editeur').addEventListener('input', maj);
+    maj();
+  </script>
+</body>
+</html>

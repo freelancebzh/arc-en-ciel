@@ -2,7 +2,6 @@
    Arc-en-Ciel Services — Système de design
    Base douce + accents vifs, motif arc-en-ciel comme signature
    ============================================================ */
-@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Karla:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
 
 :root {
     --bg: #FBF8F3;
@@ -16,7 +15,7 @@
     --green: #3CA35A;
     --green-dark: #2f8148;
     --orange: #E0703A;
-    --orange-dark: #c2582a;
+    --orange-dark: #b04e22;
     --yellow: #F2B705;
     --violet: #B15DC7;
 
@@ -114,9 +113,9 @@ nav ul li a:hover, nav ul li a:focus-visible { color: var(--text); background-co
     border-radius: 999px; font-size: 14.5px; font-weight: 700; font-family: 'Karla', sans-serif;
     transition: transform 0.15s, opacity 0.15s;
 }
-.green .btn { background-color: var(--green); }
-.blue .btn { background-color: var(--blue); }
-.orange .btn { background-color: var(--orange); }
+.green .btn { background-color: var(--green-dark); }
+.blue .btn { background-color: var(--blue-dark); }
+.orange .btn { background-color: var(--orange-dark); }
 .btn:hover { opacity: 0.92; transform: translateY(-1px); }
 
 /* Bloc CTA — remplace l'ancien bloc sombre */
@@ -142,9 +141,9 @@ nav ul li a:hover, nav ul li a:focus-visible { color: var(--text); background-co
     border: 2px solid transparent; transition: transform 0.15s, background-color 0.2s, color 0.2s;
 }
 .cta-btn:hover { transform: translateY(-1px); }
-.cta-btn.filled-blue { background-color: var(--blue); color: #fff; }
-.cta-btn.filled-green { background-color: var(--green); color: #fff; }
-.cta-btn.filled-orange { background-color: var(--orange); color: #fff; }
+.cta-btn.filled-blue { background-color: var(--blue-dark); color: #fff; }
+.cta-btn.filled-green { background-color: var(--green-dark); color: #fff; }
+.cta-btn.filled-orange { background-color: var(--orange-dark); color: #fff; }
 .cta-btn.outline { background-color: transparent; color: var(--text); border-color: var(--border); }
 .cta-btn.outline:hover { background-color: var(--bg); }
 
@@ -397,7 +396,7 @@ a:focus-visible, button:focus-visible, .btn:focus-visible, .cta-btn:focus-visibl
     font-weight: 700;
     font-size: 14px;
 }
-.service-tile.t-blue .tile-link { color: var(--blue); }
+.service-tile.t-blue .tile-link { color: var(--blue-dark); }
 .service-tile.t-green .tile-link { color: var(--green-dark); }
 .service-tile.t-orange .tile-link { color: var(--orange-dark); }
 
