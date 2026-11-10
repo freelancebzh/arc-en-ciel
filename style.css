@@ -476,3 +476,26 @@ a:focus-visible, button:focus-visible, .btn:focus-visible, .cta-btn:focus-visibl
 .art-panel.tone-summer { background: linear-gradient(150deg, #EAF7E4, #FDF3D0); }
 .art-panel.tone-autumn { background: linear-gradient(150deg, #FBEAD9, #F6DCC0); }
 .art-panel.tone-blue { background: linear-gradient(150deg, #E6F1FC, #DCEBFB); }
+
+/* Document client : Avance immédiate */
+.avance-page { padding-top: 40px; padding-bottom: 40px; max-width: 980px; }
+.avance-document { display: grid; gap: 18px; }
+.avance-identite, .avance-card {
+    background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 24px 28px; box-shadow: var(--shadow-sm);
+}
+.avance-identite { border-left: 5px solid var(--blue); }
+.avance-identite p { color: var(--text-muted); }
+.avance-identite .avance-nom { font-weight: 700; font-size: 1.15rem; color: var(--text); }
+.avance-card h2 { font-size: 1.2rem; color: var(--text); margin-bottom: 14px; display: flex; align-items: center; gap: 14px; }
+.avance-num { flex-shrink: 0; width: 36px; height: 36px; border-radius: 50%; background: #E9F2FC; color: var(--blue-dark); display: inline-flex; align-items: center; justify-content: center; font-size: 1rem; }
+.avance-card:nth-of-type(even) .avance-num { background: #E9F6EC; color: var(--green-dark); }
+.avance-card li::marker { color: var(--blue); }
+.avance-card p, .avance-card li { color: var(--text-muted); }
+.avance-card ul { padding-left: 22px; }
+.avance-card li + li { margin-top: 8px; }
+.avance-reference a { overflow-wrap: anywhere; }
+@media (max-width: 600px) {
+    .avance-identite, .avance-card { padding: 20px; }
+    .avance-card h2 { font-size: 1.08rem; }
+}
